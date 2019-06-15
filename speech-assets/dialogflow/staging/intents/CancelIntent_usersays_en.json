@@ -1,0 +1,38 @@
+[
+  {
+    "data": [
+      {
+        "text": "cancel",
+        "userDefined": false,
+        "id": "a4b31197-df9c-5496-8b81-5e48f46a5430"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "never mind",
+        "userDefined": false,
+        "id": "1f81c8d3-4714-54c0-a16d-1b6444b67e27"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "forget it",
+        "userDefined": false,
+        "id": "f438b140-6692-594e-a4de-f800b5eac6dd"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

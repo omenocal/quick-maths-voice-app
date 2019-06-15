@@ -1,0 +1,140 @@
+{
+  "en": {
+    "translation": {
+      "Launch": {
+        "FirstTimeUser": {
+          "ask": [
+            "Welcome to Quick Maths! If you came here is because you want to test your speed on maths. I will tell you a math operation and you need to guess the right result. It's as simple as 1 + 1, you say 2, and you get points. So, here's the deal: if you guess the result in the first 3 seconds, you get 10 points. Between 4 and 6 seconds, you get 8 points. Between 7 and 9 seconds, you get 6 points. If you guess the result after 9 seconds, you get 2 points. Additionally, if your operation includes numbers from 10 to 100, your points are doubled, if it's up to 1000, they're multiplied by 3, and up to 10000, multiplied by 4. But, if you say a wrong answer, you will lose 1 point. If you have zero points and keep failing, your score remains in zero, so don't worry about that. So, should we get started?"
+          ],
+          "reprompt": [
+            "Should we start the math game?"
+          ]
+        },
+        "ReturningUserReminder1": {
+          "ask": [
+            "Welcome back to Quick Maths! Thanks for coming back, I've got exciting news for you. There's a real competition happening right now around Quick Maths. While you have fun guessing quickly the result of our math operations, you can also participate in the global monthly competition. When you answer correctly, you accumulate your points for the competition. The 10 people with most points will be included in the leaderboard, available at any time for you when you subscribe to the competition. At the beginning of next month, you will see who's the genius in maths, your score will restart and you can participate again in the month. You can say: enter the competition, or start our normal game. Which would you like?"
+          ],
+          "reprompt": [
+            "Do you want to enter the competition, or start a game?"
+          ]
+        },
+        "ReturningUserReminder2": {
+          "ask": [
+            "Welcome back to Quick Maths! It's the 3rd time you come to play, thanks for that. Remember the competition. Proove you are the Math genius worlwide by trying to make it to the top 10 leaderboard. You can say: enter the competition, or start our normal game. Which would you like?"
+          ],
+          "reprompt": [
+            "Do you want to enter the competition, or start a game?"
+          ]
+        },
+        "ReturningUserReminder3": {
+          "ask": [
+            "Welcome back to Quick Maths! You are having a lot of fun, good for you. This is my last reminder for you to enter the competition. A lot of people are waiting for you to compete and make it to the top 10 leaderboard. You can say: enter the competition, or start our normal game. Which would you like?"
+          ],
+          "reprompt": [
+            "Do you want to enter the competition, or start a game?"
+          ]
+        },
+        "ReturningUser": {
+          "ask": [
+            "Welcome back to Quick Maths! Should we start with the game?"
+          ],
+          "reprompt": [
+            "Should we start the math game?"
+          ]
+        }
+      },
+      "Competition": {
+        "AlreadyIn": {
+          "ask": [
+            "Thanks for checking if you were already in the competition, and good news, you are. So, should we start a math game?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ]
+        },
+        "AccountLink": {
+          "tell": [
+            "Great! First of all, I need to know your name and email to save your score. I just sent a card to your Alexa app, click on the label and link your Amazon account. Once you complete it, open the skill again. See you soon!"
+          ]
+        },
+        "AccountLinkingCard": "{accountLinkingCard}",
+        "AddressPermission": {
+          "tell": [
+            "The next step is to grant permission to access your device address. When I show the leaderboard in your screen device or Alexa app, I will attach the city you're from. I just sent a card to your Alexa app, click on the label and update the permission. Once you complete it, open the skill again. See you soon!"
+          ]
+        },
+        "AddressPermissionCard": "{addressPermissionCard}",
+        "IspRejected": {
+          "ask": [
+            "No problem. You can enter the competition when you are ready. Do you want to start a new game now?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ]
+        },
+        "SubscriptionAccepted": {
+          "ask": [
+            "<audio src=\"\"> Awesome! You're now part of the monthly competition. Remember your goal, to be the top player of the month with most points. Do you want to play now?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ]
+        }
+      },
+      "Operation": {
+        "Expression": {
+          "ask": [
+            "How much is <sub alias=\"{number1} {operatorName} {number2}\">{number1} {operator} {number2}</sub>?"
+          ],
+          "reprompt": [
+            "How much is <sub alias=\"{number1} {operatorName} {number2}\">{number1} {operator} {number2}</sub>?"
+          ],
+          "calculation": "How much is {{wordsNumber1}} {{operatorName}} {{wordsNumber2}}?"
+        },
+        "RightAnswerExpression": {
+          "say": [
+            "That's right! <break time=\"0.5s\"/>",
+            "Excellent! <break time=\"0.5s\"/>",
+            "Amazing! that's right. <break time=\"0.5s\"/>",
+            "Correct! You are very smart. <break time=\"0.5s\"/>"
+          ]
+        },
+        "RightAnswer": {
+          "ask": [
+            "You get {pointsEarned} points. <break time=\"0.5s\"/> Should we try again?"
+          ],
+          "reprompt": [
+            "Do you want to try again?"
+          ]
+        },
+        "WrongAnswer": {
+          "ask": [
+            "No! It's {answer}. <break time=\"0.5s\"/> Should we try again?",
+            "Oops! The right answer is {answer}. <break time=\"0.5s\"/> Should we try again?",
+            "I'm sorry! It's {answer}. <break time=\"0.5s\"/> Should we try again?"
+          ],
+          "reprompt": [
+            "Do you want to try again?"
+          ]
+        }
+      },
+      "Fallback": {
+        "NotUnderstood": {
+          "say": [
+            "I'm sorry. I didn't get that."
+          ]
+        }
+      },
+      "ExitFirstTime": {
+        "tell": [
+          "Thanks for trying Quick Maths. Come back soon, and, who knows, maybe you are in the mood for a worldwide competition. Goodbye."
+        ]
+      },
+      "Exit": {
+        "tell": [
+          "Ok. Goodbye."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+	"server": {
+		"port": 3000,
+		"hostSkill": true
+	},
+  "aws": {
+    "region": "us-east-1"
+  },
+  "dynamoDB": {
+    "tables": {
+      "users": "QuickMathsUsersStaging"
+    }
+  },
+  "s3": {
+    "bucket": "QuickMathsVoiceApp"
+  },
+  "dashbot": {
+    "suppressSending": true,
+    "alexa": "key",
+    "google": "key"
+  },
+  "googleAnalytics": {
+    "trackingId": "key",
+    "suppressSending": false
+  },
+  "alexa": {
+    "subscriptionId": "competition"
+  }
+}

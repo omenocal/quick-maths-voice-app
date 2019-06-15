@@ -1,0 +1,410 @@
+[
+  {
+    "data": [
+      {
+        "text": "help me",
+        "userDefined": false,
+        "id": "2cb70143-7111-51c5-a1e0-4bb66f77b1b7"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "help please",
+        "userDefined": false,
+        "id": "65e6ff98-2c6f-5625-a573-f0420bcf806f"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "please help",
+        "userDefined": false,
+        "id": "0f00c15e-41bd-5a08-9e7a-1828e41a6bd0"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i ask you",
+        "userDefined": false,
+        "id": "4856d5ce-c374-5f08-b141-cef35b841340"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i ask",
+        "userDefined": false,
+        "id": "77c1719e-5748-56df-ac5d-7827cc568323"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i say",
+        "userDefined": false,
+        "id": "18c8826e-b40c-5891-bf09-e1e90ad9b22b"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how does this work",
+        "userDefined": false,
+        "id": "9ab05652-2d45-5ff5-a16e-625ce4d33079"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how does it work",
+        "userDefined": false,
+        "id": "b73a1f3e-4567-5647-8a1d-57c3227c6f3f"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do you work",
+        "userDefined": false,
+        "id": "65af3c63-c229-5597-a943-4d17b9c0def2"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do i use this",
+        "userDefined": false,
+        "id": "75f0070f-4f57-5bf0-bb79-80ed1f80311f"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do i do this",
+        "userDefined": false,
+        "id": "f6492919-b77f-5bcc-964c-72db2e319abd"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do you do this",
+        "userDefined": false,
+        "id": "ab731b23-910a-5779-b265-71cf37185b37"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do you use this",
+        "userDefined": false,
+        "id": "97097e4f-5c5a-5103-a34d-3177ef02c893"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what do i do",
+        "userDefined": false,
+        "id": "d8ab23ff-8ed8-5716-bd53-05e010d23de8"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what do i do next",
+        "userDefined": false,
+        "id": "1af0e825-0adc-502e-bd7d-e2955b3cb867"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do i navigate",
+        "userDefined": false,
+        "id": "a020563d-f902-5fe3-b1ba-ee14bc02c04b"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "get help",
+        "userDefined": false,
+        "id": "c0f70961-e002-5a32-8974-e3deaf1c52de"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what commands can i ask",
+        "userDefined": false,
+        "id": "7d108e2d-48ca-5540-9b16-ee94cdf0a709"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what commands can i say",
+        "userDefined": false,
+        "id": "7483d61c-0660-5a65-9e25-233ee7fba46d"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i do",
+        "userDefined": false,
+        "id": "4832ef1d-25ab-57cd-8395-e53816c091be"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i use this for",
+        "userDefined": false,
+        "id": "7529cd7b-6d52-52b0-8dd6-09ee9226c24c"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what questions can i ask",
+        "userDefined": false,
+        "id": "f768aede-ab44-57f9-894e-61cbe8525584"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can you do",
+        "userDefined": false,
+        "id": "977a2b11-5855-5fa3-96af-47767f10a5bf"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what do you do",
+        "userDefined": false,
+        "id": "53bd4306-fa02-5202-b539-2f32663936f1"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do i use you",
+        "userDefined": false,
+        "id": "9343a455-b0cd-522f-bee5-c625225b59ee"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how can i use you",
+        "userDefined": false,
+        "id": "d0f0ffee-db82-5796-8b58-1b3e02733038"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can you tell me",
+        "userDefined": false,
+        "id": "1fe05918-fca9-5f40-8891-f22f801521d0"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "other options",
+        "userDefined": false,
+        "id": "bd857299-76f6-5225-acc0-a8b0e520d742"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "options",
+        "userDefined": false,
+        "id": "91e3769f-39c5-5f74-ab8d-e4556fa53be7"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do i ask for a game",
+        "userDefined": false,
+        "id": "55601f1e-2272-50da-939d-939c9c5e048c"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how do i play this",
+        "userDefined": false,
+        "id": "e70db33c-a252-5025-842f-b320989dfdde"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how can i play this",
+        "userDefined": false,
+        "id": "ba333860-80ef-5604-a7c4-a68e6c9f5ae3"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "help",
+        "userDefined": false,
+        "id": "237d65d9-851c-5816-985a-9ef5b31209cb"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "can you help me",
+        "userDefined": false,
+        "id": "fffe83ef-e0f3-5f71-9f3d-472e12f896c6"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "data": [
+      {
+        "text": "can you tell me what's my position",
+        "userDefined": false,
+        "id": "a42fcbb3-2c0a-5fe7-b9f9-2c304df59c98"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "can you tell me what position am i",
+        "userDefined": false,
+        "id": "2c2c987a-3312-5322-bf89-f2f1183e88e8"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "my position",
+        "userDefined": false,
+        "id": "19267e0f-08c1-520a-8409-1516ca67023e"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "display the dashboard",
+        "userDefined": false,
+        "id": "22ebaca9-e1f3-57e0-be7e-7b857064f72d"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "display the winners",
+        "userDefined": false,
+        "id": "9e2bf145-bb48-51c0-a491-bfefac79f21e"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "show me the dashboard",
+        "userDefined": false,
+        "id": "b3bb4ac5-db9c-51b7-a542-1d560bef312d"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "show me the winners",
+        "userDefined": false,
+        "id": "e608ea2e-d8a9-5785-9745-c0377410d948"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "show the dashboard",
+        "userDefined": false,
+        "id": "1276bcb4-b592-56c4-8549-23de3298f435"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "show the winners",
+        "userDefined": false,
+        "id": "f89c625b-d92b-50c2-9ee3-dfce50553c78"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "top players",
+        "userDefined": false,
+        "id": "c5920239-eb0e-5870-9c04-20c0eb6c00b8"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what's my position",
+        "userDefined": false,
+        "id": "70bc537d-a461-5077-91c9-9a031918c6b4"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what position am i",
+        "userDefined": false,
+        "id": "b129f7bc-7616-5247-aec7-e014d720238d"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "who are the top players",
+        "userDefined": false,
+        "id": "f5a99cd2-5b28-5314-891f-bb543fa816fe"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "who are the winners",
+        "userDefined": false,
+        "id": "ae0c6332-c943-595d-b510-0f599ef1cac7"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

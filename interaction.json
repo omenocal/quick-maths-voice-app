@@ -1,0 +1,9 @@
+{
+  "platforms": ["alexa", "dialogflow"],
+  "spreadsheets": [
+    "https://docs.google.com/spreadsheets/d/1uiXw38s6zzht1aPE2Iqe6dRYzXccKbn8lRpF9R6ivQ8/",
+    "https://docs.google.com/spreadsheets/d/13Pwya7y26QsmOXVDv9a_Au1x9hPGn8jT8N2qoz2bCMQ/"
+  ],
+  "contentPath": "src/content",
+  "viewsPath": "src/languageResources"
+}

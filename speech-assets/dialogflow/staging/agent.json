@@ -1,0 +1,68 @@
+{
+  "description": "quick maths staging",
+  "activeAssistantAgents": [],
+  "disableInteractionLogs": false,
+  "googleAssistant": {
+    "googleAssistantCompatible": true,
+    "project": "quick-maths-staging",
+    "welcomeIntentSignInRequired": false,
+    "systemIntents": [],
+    "oAuthLinking": {
+      "required": false,
+      "grantType": "AUTH_CODE_GRANT"
+    },
+    "voiceType": "MALE_1",
+    "capabilities": [],
+    "protocolVersion": "V2",
+    "autoPreviewEnabled": true,
+    "isDeviceAgent": false,
+    "startIntents": [
+      {
+        "intentId": "748e786b-5987-5ac3-b370-25b91c855202",
+        "signInRequired": false
+      },
+      {
+        "intentId": "1e277155-0ead-57e8-bb02-48b3c517ec3a",
+        "signInRequired": false
+      },
+      {
+        "intentId": "f5d9675b-30bf-5ea0-9660-6f8fa94e8dbb",
+        "signInRequired": false
+      },
+      {
+        "intentId": "2bd67e8b-d1c0-541f-a726-b1b41412db93",
+        "signInRequired": false
+      },
+      {
+        "intentId": "f990517d-5af5-5bb0-8fa5-392d0caaa9a6",
+        "signInRequired": false
+      },
+      {
+        "intentId": "b386995b-3288-5d73-9a62-18b711980cf6",
+        "signInRequired": false
+      },
+      {
+        "intentId": "bc21ce69-9877-569c-b271-da5e92526858",
+        "signInRequired": false
+      }
+    ],
+    "endIntentIds": []
+  },
+  "defaultTimezone": "America/New_York",
+  "webhook": {
+    "url": "https://dreamy-bradbury.bespoken.link/googleAction",
+    "headers": {},
+    "available": true,
+    "useForDomains": true,
+    "cloudFunctionsEnabled": false,
+    "cloudFunctionsInitialized": false
+  },
+  "isPrivate": true,
+  "customClassifierMode": "use.after",
+  "mlMinConfidence": 0.2,
+  "supportedLanguages": [
+    "en-US"
+  ],
+  "onePlatformApiVersion": "v2beta1",
+  "language": "en"
+}

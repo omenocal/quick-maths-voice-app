@@ -1,0 +1,449 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "quick maths staging",
+      "intents": [
+        {
+          "name": "WelcomeIntent",
+          "samples": [
+            "play a game",
+            "start",
+            "start a game",
+            "begin",
+            "begin a game",
+            "a challenge",
+            "challenge me",
+            "a match",
+            "a game"
+          ],
+          "slots": []
+        },
+        {
+          "name": "NumberIntent",
+          "samples": [
+            "it's {number}",
+            "it is {number}",
+            "i guess it's {number}",
+            "i guess it is {number}",
+            "is it {number}",
+            "maybe {number}",
+            "perhaps {number}",
+            "definitely {number}"
+          ],
+          "slots": [
+            {
+              "type": "AMAZON.NUMBER",
+              "name": "number"
+            }
+          ]
+        },
+        {
+          "name": "NumberOnlyIntent",
+          "samples": [
+            "{number}"
+          ],
+          "slots": [
+            {
+              "type": "AMAZON.NUMBER",
+              "name": "number"
+            }
+          ]
+        },
+        {
+          "name": "RemainingDaysIntent",
+          "samples": [
+            "how many days are still pending",
+            "how many days are still remaining",
+            "how many days can i play",
+            "how many days can i still play",
+            "how many days do i have",
+            "how much is available",
+            "how much is it available",
+            "how much time",
+            "how much time is available",
+            "how much time is still available",
+            "how much time remaining",
+            "when does the competition end",
+            "when does the competition finish",
+            "when does this end",
+            "when does this finish",
+            "when is it over",
+            "when is the announcement",
+            "when is the competition over",
+            "when is this over"
+          ],
+          "slots": []
+        },
+        {
+          "name": "RefundIntent",
+          "samples": [
+            "can you give me my money back",
+            "can you give me my money",
+            "cancel my subscription",
+            "cancel subscription",
+            "give my money back",
+            "i want a refund",
+            "i want a refund for money",
+            "i want a refund for my money",
+            "i want my money back",
+            "i want my money",
+            "i would like to return money",
+            "i would like to return my money",
+            "i'd like to return money",
+            "i'd like to return my money",
+            "refund money",
+            "refund my money",
+            "refund",
+            "return money",
+            "return my money",
+            "want a refund for money",
+            "want a refund for my money",
+            "would like you to return money",
+            "would like you to return my money"
+          ],
+          "slots": []
+        },
+        {
+          "name": "ScoreIntent",
+          "samples": [
+            "can you tell me what's my score",
+            "how many points do i have",
+            "my points",
+            "my score",
+            "what's my score"
+          ],
+          "slots": []
+        },
+        {
+          "name": "CompetitionPositionIntent",
+          "samples": [
+            "can you tell me what's my position",
+            "can you tell me what position am i",
+            "my position",
+            "display the dashboard",
+            "display the winners",
+            "show me the dashboard",
+            "show me the winners",
+            "show the dashboard",
+            "show the winners",
+            "top players",
+            "what's my position",
+            "what position am i",
+            "who are the top players",
+            "who are the winners"
+          ],
+          "slots": []
+        },
+        {
+          "name": "EnterCompetitionIntent",
+          "samples": [
+            "challenge time",
+            "enter challenge now",
+            "enter challenge",
+            "enter the challenge now",
+            "enter the challenge",
+            "enter the competition now",
+            "enter the competition",
+            "i want to enter the challenge now",
+            "i want to enter the challenge",
+            "i want to enter the competition now",
+            "i want to enter the competition",
+            "i want to start the challenge now",
+            "i want to start the challenge",
+            "i want to start the competition now",
+            "i want to start the competition",
+            "start challenge now",
+            "start challenge",
+            "start the challenge now",
+            "start the challenge",
+            "what's the challenge",
+            "what's the challenge about",
+            "what is the challenge",
+            "what is the challenge about",
+            "what's the competition",
+            "what's the competition about",
+            "what is the competition",
+            "what is the competition about"
+          ],
+          "slots": []
+        },
+        {
+          "name": "WhatCanIBuyIntent",
+          "samples": [
+            "tell me what i can buy",
+            "what can i buy",
+            "what can i purchase",
+            "what can i shop for",
+            "what can i subscribe to"
+          ],
+          "slots": []
+        },
+        {
+          "name": "WhatDidIBuyIntent",
+          "samples": [
+            "can you tell me what am i subscribed to",
+            "can you tell me what did i buy",
+            "can you tell me what did i pay for",
+            "can you tell me what did i purchase",
+            "what am i subscribed to",
+            "what did i buy",
+            "what did i pay for",
+            "what did i purchase"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": [
+            "hold on",
+            "hold on please",
+            "wait",
+            "wait please",
+            "give me a second",
+            "give me a second please",
+            "give me a minute",
+            "give me a minute please"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": [
+            "continue please",
+            "let's continue",
+            "let us continue",
+            "let's continue please",
+            "let us continue please",
+            "ok let's continue please",
+            "ok let us continue please"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": [
+            "start from scratch",
+            "start from beginning",
+            "restart from scratch",
+            "restart from beginning"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "read the info back",
+            "read the info back please",
+            "read it back",
+            "read it back please",
+            "give me the info back",
+            "give me the info back please",
+            "get me the info back",
+            "get me the info back please",
+            "read the info again",
+            "read the info again please",
+            "read it again",
+            "read it again please",
+            "give me the info again",
+            "give me the info again please",
+            "get me the info again",
+            "get me the info again please"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "yes please",
+            "yup",
+            "yep",
+            "ready",
+            "sure",
+            "thanks",
+            "yeah",
+            "okay",
+            "absolutely",
+            "sure sounds good",
+            "affirmative",
+            "amen",
+            "find",
+            "good",
+            "yea",
+            "all right",
+            "aye aye",
+            "please",
+            "gladly",
+            "naturally",
+            "of course",
+            "positively",
+            "sure thing",
+            "very well",
+            "roger",
+            "all righty",
+            "check",
+            "cool",
+            "yes way",
+            "yeppers",
+            "yessum",
+            "hells yes",
+            "hell ya",
+            "hell yea",
+            "right on"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": [
+            "no thank you",
+            "no thanks",
+            "nope",
+            "no way",
+            "never",
+            "negative",
+            "negatron",
+            "nix",
+            "absolutely not",
+            "not by any means",
+            "no means",
+            "not at all",
+            "hell no",
+            "not this time",
+            "not ever",
+            "unfortunately not",
+            "thanks but no thanks",
+            "maybe another time",
+            "nah",
+            "not right now",
+            "not now"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help me",
+            "help please",
+            "please help",
+            "what can i ask you",
+            "what can i ask",
+            "what can i say",
+            "how does this work",
+            "how does it work",
+            "how do you work",
+            "how do i use this",
+            "how do i do this",
+            "how do you do this",
+            "how do you use this",
+            "what do i do",
+            "what do i do next",
+            "how do i navigate",
+            "get help",
+            "what commands can i ask",
+            "what commands can i say",
+            "what can i do",
+            "what can i use this for",
+            "what questions can i ask",
+            "what can you do",
+            "what do you do",
+            "how do i use you",
+            "how can i use you",
+            "what can you tell me",
+            "other options",
+            "options",
+            "how do i ask for a game",
+            "how do i play this",
+            "how can i play this"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "all done",
+            "complete",
+            "done",
+            "end",
+            "finished",
+            "i am done",
+            "i'm done",
+            "no more",
+            "stop",
+            "the end",
+            "please close",
+            "goodbye",
+            "bye",
+            "bye bye"
+          ],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": [],
+          "slots": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": [],
+          "slots": []
+        }
+      ],
+      "types": []
+    }
+  }
+}

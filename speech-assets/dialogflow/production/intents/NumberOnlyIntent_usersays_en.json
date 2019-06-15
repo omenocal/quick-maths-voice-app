@@ -1,0 +1,16 @@
+[
+  {
+    "data": [
+      {
+        "meta": "@sys.number",
+        "alias": "number",
+        "text": "{number}",
+        "userDefined": true,
+        "id": "62ad6702-7942-5083-8555-c35837207f2c"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

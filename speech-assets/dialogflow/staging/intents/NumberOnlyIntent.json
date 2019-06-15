@@ -1,0 +1,30 @@
+{
+  "name": "NumberOnlyIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "NumberOnlyIntent",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false,
+          "required": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "id": "d3dcd1d6-104f-5e3f-9e35-ca80e9b77985"
+}

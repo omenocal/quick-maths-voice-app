@@ -1,0 +1,29 @@
+{
+	"server": {
+		"port": 3000,
+		"hostSkill": true
+  },
+  "aws": {
+    "region": "us-east-1"
+  },
+  "dynamoDB": {
+    "tables": {
+      "users": "users"
+    }
+  },
+  "s3": {
+    "bucket": ""
+  },
+  "dashbot": {
+    "suppressSending": true,
+    "alexa": "key",
+    "google": "key"
+  },
+  "googleAnalytics": {
+    "trackingId": "",
+    "suppressSending": false
+  },
+  "alexa": {
+    "subscriptionId": ""
+  }
+}

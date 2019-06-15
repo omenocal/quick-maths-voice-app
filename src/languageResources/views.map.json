@@ -1,0 +1,95 @@
+{
+  "Launch.FirstTimeUser.ask": [
+    "en"
+  ],
+  "Launch.FirstTimeUser.reprompt": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder1.ask": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder1.reprompt": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder2.ask": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder2.reprompt": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder3.ask": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder3.reprompt": [
+    "en"
+  ],
+  "Launch.ReturningUser.ask": [
+    "en"
+  ],
+  "Launch.ReturningUser.reprompt": [
+    "en"
+  ],
+  "Competition.AlreadyIn.ask": [
+    "en"
+  ],
+  "Competition.AlreadyIn.reprompt": [
+    "en"
+  ],
+  "Competition.AccountLink.tell": [
+    "en"
+  ],
+  "Competition.AccountLinkingCard": [
+    "en"
+  ],
+  "Competition.AddressPermission.tell": [
+    "en"
+  ],
+  "Competition.AddressPermissionCard": [
+    "en"
+  ],
+  "Competition.IspRejected.ask": [
+    "en"
+  ],
+  "Competition.IspRejected.reprompt": [
+    "en"
+  ],
+  "Competition.SubscriptionAccepted.ask": [
+    "en"
+  ],
+  "Competition.SubscriptionAccepted.reprompt": [
+    "en"
+  ],
+  "Operation.Expression.ask": [
+    "en"
+  ],
+  "Operation.Expression.reprompt": [
+    "en"
+  ],
+  "Operation.Expression.calculation": [
+    "en"
+  ],
+  "Operation.RightAnswerExpression.say": [
+    "en"
+  ],
+  "Operation.RightAnswer.ask": [
+    "en"
+  ],
+  "Operation.RightAnswer.reprompt": [
+    "en"
+  ],
+  "Operation.WrongAnswer.ask": [
+    "en"
+  ],
+  "Operation.WrongAnswer.reprompt": [
+    "en"
+  ],
+  "Fallback.NotUnderstood.say": [
+    "en"
+  ],
+  "ExitFirstTime.tell": [
+    "en"
+  ],
+  "Exit.tell": [
+    "en"
+  ]
+}

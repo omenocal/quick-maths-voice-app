@@ -1,0 +1,26 @@
+{
+  "name": "CompletePurchaseIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "CompletePurchaseIntent",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "actions_intent_COMPLETE_PURCHASE"
+    }
+  ],
+  "id": "8cd23da2-0325-5fa5-b1bd-3098d2fde4ff"
+}

@@ -1,0 +1,35 @@
+{
+  "accountLinkingCard": [
+    "en"
+  ],
+  "addressPermissionCard": [
+    "en"
+  ],
+  "number1": [
+    "en"
+  ],
+  "operatorName": [
+    "en"
+  ],
+  "number2": [
+    "en"
+  ],
+  "operator": [
+    "en"
+  ],
+  "{wordsNumber1": [
+    "en"
+  ],
+  "{operatorName": [
+    "en"
+  ],
+  "{wordsNumber2": [
+    "en"
+  ],
+  "pointsEarned": [
+    "en"
+  ],
+  "answer": [
+    "en"
+  ]
+}

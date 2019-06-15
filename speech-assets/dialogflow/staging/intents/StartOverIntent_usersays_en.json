@@ -1,0 +1,86 @@
+[
+  {
+    "data": [
+      {
+        "text": "start from scratch",
+        "userDefined": false,
+        "id": "6743584c-e0ff-5274-b6ed-51d3a4a75dec"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "start from beginning",
+        "userDefined": false,
+        "id": "4e87836b-a944-57a4-a4ee-5273dd6c0f2a"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "restart from scratch",
+        "userDefined": false,
+        "id": "9109c743-cc0d-5052-89da-084588d4caf4"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "restart from beginning",
+        "userDefined": false,
+        "id": "ccde09ce-e188-5af7-892f-9ff91a0d3c8f"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "start over",
+        "userDefined": false,
+        "id": "bdbf9665-8ed5-5c1c-9fc0-90c408e6b3f2"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "restart",
+        "userDefined": false,
+        "id": "9e9c2718-e850-51cb-8507-96d73654255a"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "start again",
+        "userDefined": false,
+        "id": "1e829d5a-0395-5766-95e7-6c7989ad8dcd"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

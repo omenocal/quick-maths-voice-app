@@ -1,0 +1,98 @@
+[
+  {
+    "data": [
+      {
+        "text": "can you tell me what am i subscribed to",
+        "userDefined": false,
+        "id": "2b89c1f2-39b6-5ddb-a920-784b78eef5fd"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "can you tell me what did i buy",
+        "userDefined": false,
+        "id": "a2030601-9e64-549d-bd8b-e0b7cc6b2774"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "can you tell me what did i pay for",
+        "userDefined": false,
+        "id": "026bf619-a957-5125-8ab5-c0a73745e4f3"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "can you tell me what did i purchase",
+        "userDefined": false,
+        "id": "8308b59c-32b6-520d-8b52-a93094ba9c8f"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what am i subscribed to",
+        "userDefined": false,
+        "id": "1a96ad8f-c536-5d3e-bfc2-180379da1f20"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what did i buy",
+        "userDefined": false,
+        "id": "3eacaa14-9a64-5abb-9d0e-5608c390c361"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what did i pay for",
+        "userDefined": false,
+        "id": "9ae2aca3-58ce-5b40-ae78-337f7a18986e"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what did i purchase",
+        "userDefined": false,
+        "id": "d5382fd2-c524-5950-aa93-d3b71317f4f1"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

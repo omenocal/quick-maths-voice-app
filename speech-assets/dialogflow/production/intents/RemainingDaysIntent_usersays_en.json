@@ -1,0 +1,230 @@
+[
+  {
+    "data": [
+      {
+        "text": "how many days are still pending",
+        "userDefined": false,
+        "id": "8dce3289-3410-5b05-9578-0fb14944641d"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how many days are still remaining",
+        "userDefined": false,
+        "id": "6e4a12e9-c5cc-51bf-bb44-a7c035be047c"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how many days can i play",
+        "userDefined": false,
+        "id": "463786c5-35c9-5674-8fb2-7eacdfa210c2"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how many days can i still play",
+        "userDefined": false,
+        "id": "7c8e9a42-3000-5c09-941a-d2f34bec94d3"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how many days do i have",
+        "userDefined": false,
+        "id": "6017e18f-b312-5b7f-80ec-c6954b8af283"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how much is available",
+        "userDefined": false,
+        "id": "97a18299-71fc-54d3-a369-fac49f0896aa"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how much is it available",
+        "userDefined": false,
+        "id": "3e9964a9-a9ff-5359-a159-9c8a845dfe28"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how much time",
+        "userDefined": false,
+        "id": "6b1373bc-8cab-598c-b9b7-caf2b2f5f4c5"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how much time is available",
+        "userDefined": false,
+        "id": "73cb4e72-b3be-5381-871c-e544adbc87c5"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how much time is still available",
+        "userDefined": false,
+        "id": "4be96b47-eb4c-5970-b014-001090c6a9a9"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how much time remaining",
+        "userDefined": false,
+        "id": "67989528-af7d-5c23-bdd0-e0fd0ba1b08d"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when does the competition end",
+        "userDefined": false,
+        "id": "c29b6e6b-ec6c-5b78-9512-493a73e51423"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when does the competition finish",
+        "userDefined": false,
+        "id": "db7293f1-bd6f-5055-b8ec-da401955e192"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when does this end",
+        "userDefined": false,
+        "id": "d2d39ef3-8eff-5d77-83d9-c293c2442e96"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when does this finish",
+        "userDefined": false,
+        "id": "a193d729-8ae5-58a5-8428-a48a6758b650"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when is it over",
+        "userDefined": false,
+        "id": "3022d417-b2d8-5c52-89ab-1572e3211135"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when is the announcement",
+        "userDefined": false,
+        "id": "bc230240-1d7e-5bcd-a734-1066d30b6769"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when is the competition over",
+        "userDefined": false,
+        "id": "38af1b19-ab19-57c6-9834-12c2ae484e2a"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "when is this over",
+        "userDefined": false,
+        "id": "950095e5-6a3f-5ce1-8ed4-e56920b21d4b"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

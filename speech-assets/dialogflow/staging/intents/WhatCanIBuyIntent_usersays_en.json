@@ -1,0 +1,62 @@
+[
+  {
+    "data": [
+      {
+        "text": "tell me what i can buy",
+        "userDefined": false,
+        "id": "ed86eeaf-59fc-5d3a-bb55-b9b634e9d631"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i buy",
+        "userDefined": false,
+        "id": "b96703e6-baa7-5bf5-80ed-2c5233000fb7"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i purchase",
+        "userDefined": false,
+        "id": "c10d45ce-6a1e-5591-a83a-87be0793bd30"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i shop for",
+        "userDefined": false,
+        "id": "02da090a-2404-57d5-b848-7c7d1e39021c"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what can i subscribe to",
+        "userDefined": false,
+        "id": "4d4d4ad7-127d-5690-9aa2-feef38b5b887"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

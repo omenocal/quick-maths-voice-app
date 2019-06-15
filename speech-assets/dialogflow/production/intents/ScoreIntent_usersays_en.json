@@ -1,0 +1,62 @@
+[
+  {
+    "data": [
+      {
+        "text": "can you tell me what's my score",
+        "userDefined": false,
+        "id": "5c4062a5-a1fa-5d6c-8d61-1c9e03c07db7"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "how many points do i have",
+        "userDefined": false,
+        "id": "ed3e8203-fb06-5a4c-b4b2-8857aeffd865"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "my points",
+        "userDefined": false,
+        "id": "2c5c6fd1-7c76-5cd3-893f-a0f93541c6a6"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "my score",
+        "userDefined": false,
+        "id": "9c5bf1b7-668f-529e-b4e7-126906bd4925"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "what's my score",
+        "userDefined": false,
+        "id": "287d67e4-68a5-5f33-b943-2148cb67e1ee"
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
