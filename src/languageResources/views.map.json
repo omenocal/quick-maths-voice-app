@@ -5,10 +5,16 @@
   "Launch.FirstTimeUser.reprompt": [
     "en"
   ],
+  "Launch.FirstTimeUser.dialogflowSuggestions": [
+    "en"
+  ],
   "Launch.ReturningUserReminder1.ask": [
     "en"
   ],
   "Launch.ReturningUserReminder1.reprompt": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder1.dialogflowSuggestions": [
     "en"
   ],
   "Launch.ReturningUserReminder2.ask": [
@@ -17,10 +23,16 @@
   "Launch.ReturningUserReminder2.reprompt": [
     "en"
   ],
+  "Launch.ReturningUserReminder2.dialogflowSuggestions": [
+    "en"
+  ],
   "Launch.ReturningUserReminder3.ask": [
     "en"
   ],
   "Launch.ReturningUserReminder3.reprompt": [
+    "en"
+  ],
+  "Launch.ReturningUserReminder3.dialogflowSuggestions": [
     "en"
   ],
   "Launch.ReturningUser.ask": [
@@ -29,10 +41,43 @@
   "Launch.ReturningUser.reprompt": [
     "en"
   ],
+  "Launch.ReturningUser.dialogflowSuggestions": [
+    "en"
+  ],
   "Competition.AlreadyIn.ask": [
     "en"
   ],
   "Competition.AlreadyIn.reprompt": [
+    "en"
+  ],
+  "Competition.AlreadyIn.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.PurchaseStatus.ok.say": [
+    "en"
+  ],
+  "Competition.PurchaseStatus.alreadyowned.say": [
+    "en"
+  ],
+  "Competition.PurchaseStatus.itemchangerequested.say": [
+    "en"
+  ],
+  "Competition.PurchaseStatus.usercancelled.say": [
+    "en"
+  ],
+  "Competition.PurchaseStatus.error.say": [
+    "en"
+  ],
+  "Competition.PurchaseStatus.unspecified.say": [
+    "en"
+  ],
+  "Competition.Accepted.ask": [
+    "en"
+  ],
+  "Competition.Accepted.reprompt": [
+    "en"
+  ],
+  "Competition.Accepted.dialogflowSuggestions": [
     "en"
   ],
   "Competition.AccountLink.tell": [
@@ -53,10 +98,196 @@
   "Competition.IspRejected.reprompt": [
     "en"
   ],
+  "Competition.IspRejected.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.Position.ask": [
+    "en"
+  ],
+  "Competition.Position.reprompt": [
+    "en"
+  ],
+  "Competition.Position.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.NoScore.ask": [
+    "en"
+  ],
+  "Competition.NoScore.reprompt": [
+    "en"
+  ],
+  "Competition.NoScore.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.NotRegistered.ask": [
+    "en"
+  ],
+  "Competition.NotRegistered.reprompt": [
+    "en"
+  ],
+  "Competition.NotRegistered.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.Refund.Confirm.ask": [
+    "en"
+  ],
+  "Competition.Refund.Confirm.reprompt": [
+    "en"
+  ],
+  "Competition.Refund.Confirm.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.Refund.NotCancel.ask": [
+    "en"
+  ],
+  "Competition.Refund.NotCancel.reprompt": [
+    "en"
+  ],
+  "Competition.Refund.NotCancel.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.Refund.NotSubscribed.ask": [
+    "en"
+  ],
+  "Competition.Refund.NotSubscribed.reprompt": [
+    "en"
+  ],
+  "Competition.Refund.NotSubscribed.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.Refund.GoogleMoreInformation.say": [
+    "en"
+  ],
+  "Competition.Refund.GoogleMoreInformationScreen.say": [
+    "en"
+  ],
+  "Competition.Refund.GooglePlayHelp": [
+    "en"
+  ],
+  "Competition.Refund.NotToAlexa.ask": [
+    "en"
+  ],
+  "Competition.Refund.NotToAlexa.reprompt": [
+    "en"
+  ],
+  "Competition.Refund.YesToAlexa.ask": [
+    "en"
+  ],
+  "Competition.Refund.YesToAlexa.reprompt": [
+    "en"
+  ],
+  "Competition.RemainingDays.say": [
+    "en"
+  ],
+  "Competition.Score.ask": [
+    "en"
+  ],
+  "Competition.Score.reprompt": [
+    "en"
+  ],
+  "Competition.Score.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.Score.points": [
+    "en"
+  ],
+  "Competition.Score.points_plural": [
+    "en"
+  ],
+  "Competition.SignUp.Location": [
+    "en"
+  ],
+  "Competition.SignUp.PermissionDenied.ask": [
+    "en"
+  ],
+  "Competition.SignUp.PermissionDenied.reprompt": [
+    "en"
+  ],
+  "Competition.SignUp.PermissionDenied.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.StartGame.ask": [
+    "en"
+  ],
+  "Competition.StartGame.reprompt": [
+    "en"
+  ],
+  "Competition.StartGame.dialogflowSuggestions": [
+    "en"
+  ],
   "Competition.SubscriptionAccepted.ask": [
     "en"
   ],
   "Competition.SubscriptionAccepted.reprompt": [
+    "en"
+  ],
+  "Competition.SubscriptionAccepted.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.SubscriptionReminder.say": [
+    "en"
+  ],
+  "Competition.ResultsTitle": [
+    "en"
+  ],
+  "Competition.ResultsItem": [
+    "en"
+  ],
+  "Competition.ResultsItem_plural": [
+    "en"
+  ],
+  "Competition.ResultsItemScreen": [
+    "en"
+  ],
+  "Competition.ResultsItemScreen_plural": [
+    "en"
+  ],
+  "Competition.TableHeaders.Position": [
+    "en"
+  ],
+  "Competition.TableHeaders.Player": [
+    "en"
+  ],
+  "Competition.TableHeaders.City": [
+    "en"
+  ],
+  "Competition.TableHeaders.Victories": [
+    "en"
+  ],
+  "Competition.WhatCanIBuyNotSubscribed.ask": [
+    "en"
+  ],
+  "Competition.WhatCanIBuyNotSubscribed.reprompt": [
+    "en"
+  ],
+  "Competition.WhatCanIBuyNotSubscribed.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.WhatCanIBuy.ask": [
+    "en"
+  ],
+  "Competition.WhatCanIBuy.reprompt": [
+    "en"
+  ],
+  "Competition.WhatCanIBuy.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.WhatDidIBuyNotSubscribed.ask": [
+    "en"
+  ],
+  "Competition.WhatDidIBuyNotSubscribed.reprompt": [
+    "en"
+  ],
+  "Competition.WhatDidIBuyNotSubscribed.dialogflowSuggestions": [
+    "en"
+  ],
+  "Competition.WhatDidIBuy.ask": [
+    "en"
+  ],
+  "Competition.WhatDidIBuy.reprompt": [
+    "en"
+  ],
+  "Competition.WhatDidIBuy.dialogflowSuggestions": [
     "en"
   ],
   "Operation.Expression.ask": [
@@ -77,10 +308,16 @@
   "Operation.RightAnswer.reprompt": [
     "en"
   ],
+  "Operation.RightAnswer.dialogflowSuggestions": [
+    "en"
+  ],
   "Operation.WrongAnswer.ask": [
     "en"
   ],
   "Operation.WrongAnswer.reprompt": [
+    "en"
+  ],
+  "Operation.WrongAnswer.dialogflowSuggestions": [
     "en"
   ],
   "Fallback.NotUnderstood.say": [
@@ -90,6 +327,9 @@
     "en"
   ],
   "Exit.tell": [
+    "en"
+  ],
+  "Error.tell": [
     "en"
   ]
 }

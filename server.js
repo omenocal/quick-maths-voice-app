@@ -7,15 +7,10 @@ const {
   assistantAction,
 } = require('./src/app');
 const config = require('./src/config');
-const accountLinkingRoutes = require('./web/routes');
 
 const expressApp = express();
 expressApp.use(express.json());
 expressApp.use(express.urlencoded({ extended: true }));
-expressApp.use(express.static(`${__dirname}/web/public`));
-expressApp.set('views', `${__dirname}/web/views`);
-expressApp.set('view engine', 'ejs');
-
 
 const routes = {
   '/alexa': alexaSkill,
@@ -37,7 +32,6 @@ if (config.server.hostSkill) {
     );
   });
 }
-expressApp.use(accountLinkingRoutes);
 
 expressApp.listen(config.server.port);
 exports.expressApp = expressApp;

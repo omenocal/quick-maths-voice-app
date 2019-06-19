@@ -1,0 +1,33 @@
+{
+  "listTemplate1Metadata": {
+    "type": "object",
+    "objectId": "lt1Metadata",
+    "backgroundColor": "#000000",
+    "headerTitle": "What's your choice?",
+    "leaderboardBackgroundUrl": "https://s3.amazonaws.com/rock-paper-scissors-lizard-spock-skill/images/leaderboard_background.jpg",
+    "logoUrl": "https://s3.amazonaws.com/rock-paper-scissors-lizard-spock-skill/images/rpsls_512.png"
+  },
+  "listTemplate1ListData": {
+    "type": "list",
+    "listId": "lt1Sample",
+    "totalNumberOfItems": 3,
+    "listPage": {
+      "listItems": [
+        {
+          "listItemIdentifier": "1",
+          "ordinalNumber": 1,
+          "text": "Octavio, Lehi",
+          "score": 100,
+          "token": "1"
+        },
+        {
+          "listItemIdentifier": "2",
+          "ordinalNumber": 2,
+          "text": "Anastasio, Portland",
+          "score": 200,
+          "token": "2"
+        }
+      ]
+    }
+  }
+}

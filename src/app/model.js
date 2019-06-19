@@ -4,9 +4,15 @@ const _ = require('lodash');
 const moment = require('moment-timezone');
 const ntw = require('number-to-words');
 const readingTime = require('reading-time');
+const voxa = require('voxa');
 
+const backgroundWithLeaderboardData = require('./aplTemplates/backgroundWithLeaderboard/data');
+const backgroundWithLeaderboardDocument = require('./aplTemplates/backgroundWithLeaderboard/document');
+const config = require('../config');
 const levels = require('../content/levels');
 const operators = require('../content/operators');
+
+const { DisplayTemplate } = voxa;
 
 class Model {
   constructor(data = {}) {
@@ -17,11 +23,12 @@ class Model {
 
   isAnswerRight(result) {
     const isRight = result === this.answer;
+    const competitiondId = this.getCompetitiondId();
 
     if (isRight) {
       const today = +new Date();
       const timeDiff = today - this.dateStart - this.speechTimeDiff;
-      let pointsEarned = this.user.points || 0;
+      let pointsEarned = 0;
 
       console.log('today', today);
       console.log('dateStart', this.dateStart);
@@ -40,12 +47,18 @@ class Model {
 
       console.log('pointsEarned', pointsEarned);
 
+      pointsEarned *= this.level.pointsMultiplier;
+
+      console.log('points after multiplier', pointsEarned);
+
       this.pointsEarned = pointsEarned;
-      this.user.data.points = pointsEarned;
+      this.user.addPoints(competitiondId, pointsEarned);
 
       this.sessionCorrect += 1;
     } else {
       this.sessionIncorrect += 1;
+
+      this.user.removePoints(competitiondId);
     }
 
     return isRight;
@@ -53,28 +66,116 @@ class Model {
 
   getCompetitiondId() {
     const { timezone } = this.user.data;
-    const competitionId = moment().tz(timezone).format('YYYY-MM');
 
-    return competitionId;
+    if (timezone) {
+      return moment().tz(timezone).format('YYYY-MM');
+    }
+
+    return moment().format('YYYY-MM');
   }
 
-  isUserInCompetition() {
+  getCurrentPoints() {
     const competitionId = this.getCompetitiondId();
-    const { competitions, isCanceled } = this.user.data;
-    const currentCompetition = _.find(competitions, { competitionId });
 
-    return !_.isUndefined(currentCompetition) && !isCanceled;
+    return this.user.getCurrentPoints(competitionId);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  async getItemsInPlayStore(voxaEvent) {
+    try {
+      const result = await voxaEvent.google.digitalGoods.getSubscriptions(config.google.skus);
+
+      console.log('getItemsInPlayStore result', JSON.stringify(result, null, 2));
+
+      return _.head(result.skus);
+    } catch (err) {
+      console.log('getItemsInPlayStore err', err);
+      throw err;
+    }
+  }
+
+  async getProduct(voxaEvent) {
+    if (voxaEvent.alexa) {
+      return voxaEvent.alexa.isp.getProductByReferenceName(config.alexa.subscriptionId);
+    }
+
+    const { packageName } = config.google;
+
+    const { packageEntitlements } = voxaEvent.rawEvent.originalDetectIntentRequest.payload.user;
+    console.log('packageEntitlements', JSON.stringify(packageEntitlements, null, 2));
+
+    const entitlement = _.find(packageEntitlements, { packageName });
+    const subscription = _.find(entitlement, { sku: _.head(config.google.skus) });
+    const autoRenewing = _.get(subscription, 'inAppDetails.inAppPurchaseData.autoRenewing');
+    const productFromStore = await this.getItemsInPlayStore(voxaEvent);
+
+    console.log('autoRenewing', autoRenewing);
+
+    if (entitlement) {
+      productFromStore.entitled = 'ENTITLED';
+    }
+
+    return productFromStore;
+  }
+
+  getTimeRemaining() {
+    const { timezone } = this.user.data;
+    let today = moment();
+
+    if (timezone) {
+      today = moment().tz(timezone);
+    }
+
+    const endOfMonth = today.clone().endOf('month').endOf('day');
+    const daysDiff = endOfMonth.diff(today, 'days');
+    const hoursDiff = endOfMonth.diff(today, 'hours');
+    const minutesDiff = endOfMonth.diff(today, 'minutes');
+
+    if (hoursDiff < 1) {
+      return moment.duration(minutesDiff, 'minutes').humanize(true);
+    }
+
+    if (daysDiff < 1) {
+      return moment.duration(hoursDiff, 'hours').humanize(true);
+    }
+
+    return moment.duration(daysDiff, 'days').humanize(true);
+  }
+
+  hasPoints() {
+    const competitionId = this.getCompetitiondId();
+
+    return this.user.hasPoints(competitionId);
+  }
+
+  async isUserSubscribed(voxaEvent) {
+    const product = await this.getProduct(voxaEvent);
+
+    return product.entitled === 'ENTITLED';
+  }
+
+  async loadUserPosition(voxaEvent) {
+    const competitionId = this.getCompetitiondId();
+    const allUsers = await this.user.getAllUsersInChallenge();
+    const [
+      position,
+      totalPoints,
+      totalPlayers,
+    ] = await this.user.getUserPosition(competitionId, allUsers);
+
+    this.position = position;
+    this.totalPlayers = totalPlayers;
+    this.totalPoints = totalPoints;
+
+    return this.showWinnersDashboard(voxaEvent, allUsers, competitionId);
   }
 
   saveUserAddress(info) {
-    this.user.data.city = info.city;
-    this.user.data.countryCode = info.countryCode;
+    this.user.saveUserAddress(info);
   }
 
   saveUserInfo(info) {
-    this.user.data.email = info.email;
-    this.user.data.name = info.name;
-    this.user.data.zipCode = info.zipCode;
+    this.user.saveUserInfo(info);
   }
 
   selectOperation(voxaEvent) {
@@ -161,6 +262,116 @@ class Model {
 
   shouldSpeakReminder(reminderCount) {
     return this.user.data.reminderCount === reminderCount + 1;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  showWinnersDashboard(voxaEvent, allUsers, competitionId) {
+    const playerArray = _(_.cloneDeep(allUsers))
+      .map((x) => {
+        const player = _.find(x.competitions, { competitionId });
+
+        if (!player) {
+          return undefined;
+        }
+
+        player.count = player.score;
+        player.name = _.capitalize(_.words(x.name || 'Anonymous')[0]);
+        player.city = _.capitalize(x.city) || voxaEvent.request.locale.split('-')[1];
+
+        delete player.score;
+        return player;
+      })
+      .compact()
+      .orderBy(['count'], ['desc'])
+      .take(10)
+      .value();
+    const reply = {};
+
+    if (_.isEmpty(playerArray)) {
+      return reply;
+    }
+
+    if (voxaEvent.google) {
+      const columns = [
+        voxaEvent.t('Competition.TableHeaders.Position'),
+        voxaEvent.t('Competition.TableHeaders.Player'),
+        voxaEvent.t('Competition.TableHeaders.City'),
+        voxaEvent.t('Competition.TableHeaders.Victories'),
+      ];
+
+      const rows = [];
+
+      _.forEach(playerArray, (item, key) => {
+        rows.push([(key + 1).toString(), item.name, item.city, item.count.toString()]);
+      });
+
+      reply.dialogflowTable = {
+        columns,
+        rows,
+        title: voxaEvent.t('Competition.ResultsTitle'),
+      };
+    }
+
+    const hasAPLInterface = _.includes(voxaEvent.supportedInterfaces, 'Alexa.Presentation.APL');
+    const hasScreenInterface = _.includes(voxaEvent.supportedInterfaces, 'Display');
+
+    if (hasAPLInterface) {
+      const datasources = _.cloneDeep(backgroundWithLeaderboardData);
+      const documentTemplate = _.cloneDeep(backgroundWithLeaderboardDocument);
+      const listItems = _.map(playerArray, (item, key) => ({
+        listItemIdentifier: key + 1,
+        ordinalNumber: key + 1,
+        score: item.count,
+        text: `${item.name}, ${item.city}`,
+        token: key + 1,
+      }));
+
+      datasources.listTemplate1Metadata.headerTitle = voxaEvent.t('Competition.ResultsTitle');
+      datasources.listTemplate1ListData.listPage.listItems = listItems;
+      datasources.listTemplate1ListData.totalNumberOfItems = _.size(listItems);
+
+      reply.alexaAPLTemplate = {
+        token: 'APL',
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        document: documentTemplate,
+        datasources,
+      };
+    } else if (hasScreenInterface) {
+      const listTemplate1 = new DisplayTemplate('ListTemplate1')
+        .setTitle(voxaEvent.t('Competition.ResultsTitle'))
+        .setToken('listTemplate1')
+        .setBackButton('HIDDEN');
+
+      _.forEach(playerArray, (item, key) => {
+        listTemplate1.addItem(
+          key + 1,
+          null,
+          `<font size='5'>${item.name}, ${item.city}</font>`,
+          `<font size='3'>${voxaEvent.t('Competition.ResultsItemScreen', item)}</font>`,
+        );
+      });
+
+      reply.alexaRenderTemplate = listTemplate1;
+    }
+
+    const cardContentArray = _.map(playerArray, (item, key) => {
+      const params = {
+        order: key + 1,
+        ...item,
+      };
+
+      return voxaEvent.t('Competition.ResultsItem', params);
+    });
+
+    const alexaCardContent = _.join(cardContentArray, '\n');
+
+    reply.alexaCard = {
+      content: alexaCardContent,
+      title: voxaEvent.t('Competition.ResultsTitle'),
+      type: 'Simple',
+    };
+
+    return reply;
   }
 
   static deserialize(data) {

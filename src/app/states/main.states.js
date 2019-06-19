@@ -8,17 +8,20 @@ function register(voxaApp) {
   voxaApp.onIntent('CancelIntent', { to: 'exit' });
   voxaApp.onIntent('StopIntent', { to: 'exit' });
 
-  voxaApp.onState('launch', (voxaEvent) => {
+  voxaApp.onState('launch', async (voxaEvent) => {
+    const isUserSubscribed = await voxaEvent.model.isUserSubscribed(voxaEvent);
     let reply = 'Launch.ReturningUser';
 
     if (voxaEvent.model.user.isFirstTime) {
       reply = 'Launch.FirstTimeUser';
-    } else if (voxaEvent.model.shouldSpeakReminder(1)) {
-      reply = 'Launch.ReturningUserReminder1';
-    } else if (voxaEvent.model.shouldSpeakReminder(2)) {
-      reply = 'Launch.ReturningUserReminder2';
-    } else if (voxaEvent.model.shouldSpeakReminder(3)) {
-      reply = 'Launch.ReturningUserReminder3';
+    } else if (!isUserSubscribed) {
+      if (voxaEvent.model.shouldSpeakReminder(1)) {
+        reply = 'Launch.ReturningUserReminder1';
+      } else if (voxaEvent.model.shouldSpeakReminder(2)) {
+        reply = 'Launch.ReturningUserReminder2';
+      } else if (voxaEvent.model.shouldSpeakReminder(3)) {
+        reply = 'Launch.ReturningUserReminder3';
+      }
     }
 
     return {

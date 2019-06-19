@@ -19,6 +19,16 @@ exports.operator = voxaEvent => voxaEvent.model.operator;
 
 exports.operatorName = voxaEvent => voxaEvent.model.operatorName;
 
-exports.points = voxaEvent => voxaEvent.model.user.data.points;
-
 exports.pointsEarned = voxaEvent => voxaEvent.model.pointsEarned;
+
+exports.position = voxaEvent => voxaEvent.model.position;
+
+exports.totalPlayers = voxaEvent => voxaEvent.model.totalPlayers;
+
+exports.totalPoints = (voxaEvent) => {
+  const count = voxaEvent.model.totalPoints;
+
+  return voxaEvent.t('Competition.Score.points', { count });
+};
+
+exports.timeRemaining = voxaEvent => voxaEvent.model.getTimeRemaining();

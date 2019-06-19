@@ -25,5 +25,9 @@
   },
   "alexa": {
     "subscriptionId": ""
+  },
+  "google": {
+    "androidPackageName": "",
+    "skus": [""]
   }
 }

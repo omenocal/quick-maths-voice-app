@@ -38,6 +38,110 @@ class User {
     return this.data.sessionCount;
   }
 
+  async getAllUsersInChallenge(previousItems, lastEvaluatedKey) {
+    previousItems = previousItems || [];
+
+    const params = {
+      ExpressionAttributeNames: {
+        '#competitions': 'competitions',
+      },
+      FilterExpression: 'attribute_exists(#competitions)',
+      TableName: config.dynamoDB.tables.users,
+    };
+
+    if (lastEvaluatedKey) {
+      params.ExclusiveStartKey = lastEvaluatedKey;
+    }
+
+    const result = await client.scan(params).promise();
+    const items = _.concat(previousItems, result.Items || []);
+
+    if (_.isEmpty(result.LastEvaluatedKey)) {
+      return items;
+    }
+
+    return this.getAllUsersInChallenge(items, result.LastEvaluatedKey);
+  }
+
+  addPoints(competitionId, points) {
+    const competitions = this.data.competitions || [];
+    const currentCompetition = _.find(competitions, { competitionId });
+
+    if (currentCompetition) {
+      currentCompetition.score += points;
+    } else {
+      this.data.competitions = [
+        {
+          competitionId,
+          score: points,
+        },
+      ];
+    }
+  }
+
+  cancelSubscription() {
+    this.data.isCanceled = true;
+  }
+
+  getCurrentPoints(competitionId) {
+    const competitions = this.data.competitions || [];
+    const currentCompetition = _.find(competitions, { competitionId }) || {};
+
+    return currentCompetition.score;
+  }
+
+  async getUserPosition(competitionId, allUsers) {
+    if (!competitionId) {
+      competitionId = this.getCompetitiondId(context);
+    }
+
+    const { competitions } = this.data;
+    const currentCompetition = _.find(competitions, { competitionId });
+
+    const playersArray = _(allUsers)
+      .map(x => _.find(x.competitions, { competitionId }))
+      .compact()
+      .orderBy(['score'], ['desc'])
+      .map('score')
+      .value();
+
+    const position = _.indexOf(playersArray, currentCompetition.score) + 1;
+    return [position, currentCompetition.score, _.size(playersArray)];
+  }
+
+  hasPoints(competitionId) {
+    const currentPoints = this.getCurrentPoints(competitionId);
+
+    return currentPoints > 0;
+  }
+
+  isUserInCompetition(competitionId) {
+    const { competitions, isCanceled } = this.data;
+    const currentCompetition = _.find(competitions, { competitionId });
+
+    return !_.isUndefined(currentCompetition) && !isCanceled;
+  }
+
+  removePoints(competitionId) {
+    const competitions = this.data.competitions || [];
+    const currentCompetition = _.find(competitions, { competitionId }) || {};
+
+    // IF USER FAILS, WE REMOVE 1 POINT FROM THEIR SCORE
+    if (currentCompetition.score > 0) {
+      currentCompetition.score -= 1;
+    }
+  }
+
+  saveUserAddress(info) {
+    this.data = _.merge(this.data, info);
+  }
+
+  saveUserInfo(info) {
+    this.data.email = info.email;
+    this.data.name = info.name;
+    this.data.zipCode = info.zipCode;
+  }
+
   toJSON() {
     return this.data;
   }

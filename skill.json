@@ -2,6 +2,9 @@
   "manifest": {
     "apis": {
       "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:496454139797:function:quick-maths-alexa-skill:V1"
+        },
         "interfaces": [
           {
             "type": "ALEXA_PRESENTATION_APL"
@@ -12,13 +15,10 @@
           {
             "type": "RENDER_TEMPLATE"
           }
-        ],
-        "endpoint": {
-          "sslCertificateType": "Wildcard",
-          "uri": "https://dreamy-bradbury.bespoken.link/alexa"
-        }
+        ]
       }
     },
+    "manifestVersion": "1.0",
     "permissions": [
       {
         "name": "alexa::devices:all:address:full:read"
@@ -27,70 +27,70 @@
         "name": "alexa::alerts:reminders:skill:readwrite"
       }
     ],
+    "privacyAndCompliance": {
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://octaviomenocalcordero.wordpress.com/2019/06/12/quick-maths-for-amazon-alexa-privacy-policy/",
+          "termsOfUseUrl": ""
+        },
+        "en-GB": {
+          "privacyPolicyUrl": "https://octaviomenocalcordero.wordpress.com/2019/06/12/quick-maths-for-amazon-alexa-privacy-policy/",
+          "termsOfUseUrl": ""
+        }
+      },
+      "allowsPurchases": true,
+      "usesPersonalInfo": true,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
     "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Quick Maths",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c947/5b485d5dc07d490987354aff0446fb69/APP_ICON?versionId=18bpYdwVCEpa9HewAsTtoEhUDkoA6vUG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T175747Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c76bedd240105fd39f67c6e9f0638189ffa03c156739bd49e0158aba2389cb3b",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4917/c1642b610e7e46ff919ee77c837d3231/APP_ICON_LARGE?versionId=Q0x4gphah991SF6UxjcSC_FViQo5GXPn&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T175747Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8d235e214b6fed7b2adbe9f0e450e659f1a4a5fd20a03b689a3b817898de728d",
+          "summary": "Alexa can play the Quick Maths game. Ask Alexa to play a game with you and you will see how good are you in this game.",
+          "description": "Do you accept the challenge of playing with Alexa? Alexa is the best player in the Quick Maths game, do you really think you could win? Dare to challenge Alexa and we will see who is the best in this game.\n\n**** QUICK MATHS COMPETITION ****\n\nIf you're already a fan of this skill you will find even more fun by competing with people around the world for the top places of the competition. Every month you'll have the opportunity to prove you're the best player. If it's the first time you are going to compete, Alexa will guide you through the steps needed:\n\nAccount Linking: Give Alexa the permission to access your email, name and device location. When we announce the top 10 best players of the month, you'll be able to see in your screen device (Echo Show/Spot/Fire TV), or in your Alexa app, the top 10 players with their name and city they're from, as well as the number of victories they got, for example:\n1. John, Seattle => 1000 victories\n2. Sarah, Houston => 995 victories\n\nIf you don't want to participate, that's fine. You can keep playing with the Quick Maths skill as you may already be doing right now!\n\nWhile the monthly competition is running, you can check your score and your position. Just say: \"Alexa, open quick maths\" and then:\n- Alexa, what's my score\nor\n- Alexa, what's my position\n\nYou'll be able to see the leaderboard of the 10 top players in your Echo Spot/Show/Fire TV, and in your Alexa app.\n\nCome join thousands of people who are playing the Quick Maths competition!",
+          "examplePhrases": [
+            "Alexa, open quick maths",
+            "Alexa, ask quick maths to play a game",
+            "Alexa, ask quick maths for a match"
+          ],
+          "keywords": [
+            "quick",
+            "maths",
+            "calculation",
+            "competition",
+            "world",
+            "best"
+          ]
+        },
+        "en-GB": {
+          "name": "Quick Maths",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c947/5b485d5dc07d490987354aff0446fb69/APP_ICON?versionId=18bpYdwVCEpa9HewAsTtoEhUDkoA6vUG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T175747Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c76bedd240105fd39f67c6e9f0638189ffa03c156739bd49e0158aba2389cb3b",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4917/c1642b610e7e46ff919ee77c837d3231/APP_ICON_LARGE?versionId=Q0x4gphah991SF6UxjcSC_FViQo5GXPn&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T175747Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8d235e214b6fed7b2adbe9f0e450e659f1a4a5fd20a03b689a3b817898de728d",
+          "summary": "Alexa can play the Quick Maths game. Ask Alexa to play a game with you and you will see how good are you in this game.",
+          "description": "Do you accept the challenge of playing with Alexa? Alexa is the best player in the Quick Maths game, do you really think you could win? Dare to challenge Alexa and we will see who is the best in this game.\n\n**** QUICK MATHS COMPETITION ****\n\nIf you're already a fan of this skill you will find even more fun by competing with people around the world for the top places of the competition. Every month you'll have the opportunity to prove you're the best player. If it's the first time you are going to compete, Alexa will guide you through the steps needed:\n\nAccount Linking: Give Alexa the permission to access your email, name and device location. When we announce the top 10 best players of the month, you'll be able to see in your screen device (Echo Show/Spot/Fire TV), or in your Alexa app, the top 10 players with their name and city they're from, as well as the number of victories they got, for example:\n1. John, Seattle => 1000 victories\n2. Sarah, Houston => 995 victories\n\nIf you don't want to participate, that's fine. You can keep playing with the Quick Maths skill as you may already be doing right now!\n\nWhile the monthly competition is running, you can check your score and your position. Just say: \"Alexa, open quick maths\" and then:\n- Alexa, what's my score\nor\n- Alexa, what's my position\n\nYou'll be able to see the leaderboard of the 10 top players in your Echo Spot/Show/Fire TV, and in your Alexa app.\n\nCome join thousands of people who are playing the Quick Maths competition!",
+          "examplePhrases": [
+            "Alexa, open quick maths",
+            "Alexa, ask quick maths to play a game",
+            "Alexa, ask quick maths for a match"
+          ],
+          "keywords": [
+            "quick",
+            "maths",
+            "calculation",
+            "competition",
+            "world",
+            "best"
+          ]
+        }
+      },
       "isAvailableWorldwide": true,
       "testingInstructions": "You need to do account linking to persist your score",
       "category": "GAMES",
-      "locales": {
-        "en-US": {
-          "name": "Quick Maths",
-          "summary": "Alexa can play the Quick Maths game. Ask Alexa to play a game with you and you will see how good are you in this game.",
-          "description": "Do you accept the challenge of playing with Alexa? Alexa is the best player in the Quick Maths game, do you really think you could win? Dare to challenge Alexa and we will see who is the best in this game.\n\n**** QUICK MATHS COMPETITION ****\n\nIf you're already a fan of this skill you will find even more fun by competing with people around the world for the top places of the competition. Every month you'll have the opportunity to prove you're the best player. If it's the first time you are going to compete, Alexa will guide you through the steps needed:\n\nAccount Linking: Give Alexa the permission to access your email, name and device location. When we announce the top 10 best players of the month, you'll be able to see in your screen device (Echo Show/Spot/Fire TV), or in your Alexa app, the top 10 players with their name and city they're from, as well as the number of victories they got, for example:\n1. John, Seattle => 1000 victories\n2. Sarah, Houston => 995 victories\n\nIf you don't want to participate, that's fine. You can keep playing with the Quick Maths skill as you may already be doing right now!\n\nWhile the monthly competition is running, you can check your score and your position. Just say: \"Alexa, open quick maths\" and then:\n- Alexa, what's my score\nor\n- Alexa, what's my position\n\nYou'll be able to see the leaderboard of the 10 top players in your Echo Spot/Show/Fire TV, and in your Alexa app.\n\nCome join thousands of people who are playing the Quick Maths competition!",
-          "examplePhrases": [
-            "Alexa, open quick maths",
-            "Alexa, ask quick maths to play a game",
-            "Alexa, ask quick maths for a match"
-          ],
-          "keywords": [
-            "quick",
-            "maths",
-            "calculation",
-            "competition",
-            "world",
-            "best"
-          ],
-          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c947/5b485d5dc07d490987354aff0446fb69/APP_ICON?versionId=18bpYdwVCEpa9HewAsTtoEhUDkoA6vUG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190612T163349Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190612%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=344fec8b2d04bcda9731c58de4ca5513dac83bc43ad01d003d972f5514681076",
-          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4917/c1642b610e7e46ff919ee77c837d3231/APP_ICON_LARGE?versionId=Q0x4gphah991SF6UxjcSC_FViQo5GXPn&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190612T163349Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190612%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e4eb9f88766dea9cfeefb3b849d0c0ccfcee82317cdeb333d3066a96fd7fa890"
-        },
-        "en-GB": {
-          "name": "Quick Maths",
-          "summary": "Alexa can play the Quick Maths game. Ask Alexa to play a game with you and you will see how good are you in this game.",
-          "description": "Do you accept the challenge of playing with Alexa? Alexa is the best player in the Quick Maths game, do you really think you could win? Dare to challenge Alexa and we will see who is the best in this game.\n\n**** QUICK MATHS COMPETITION ****\n\nIf you're already a fan of this skill you will find even more fun by competing with people around the world for the top places of the competition. Every month you'll have the opportunity to prove you're the best player. If it's the first time you are going to compete, Alexa will guide you through the steps needed:\n\nAccount Linking: Give Alexa the permission to access your email, name and device location. When we announce the top 10 best players of the month, you'll be able to see in your screen device (Echo Show/Spot/Fire TV), or in your Alexa app, the top 10 players with their name and city they're from, as well as the number of victories they got, for example:\n1. John, Seattle => 1000 victories\n2. Sarah, Houston => 995 victories\n\nIf you don't want to participate, that's fine. You can keep playing with the Quick Maths skill as you may already be doing right now!\n\nWhile the monthly competition is running, you can check your score and your position. Just say: \"Alexa, open quick maths\" and then:\n- Alexa, what's my score\nor\n- Alexa, what's my position\n\nYou'll be able to see the leaderboard of the 10 top players in your Echo Spot/Show/Fire TV, and in your Alexa app.\n\nCome join thousands of people who are playing the Quick Maths competition!",
-          "examplePhrases": [
-            "Alexa, open quick maths",
-            "Alexa, ask quick maths to play a game",
-            "Alexa, ask quick maths for a match"
-          ],
-          "keywords": [
-            "quick",
-            "maths",
-            "calculation",
-            "competition",
-            "world",
-            "best"
-          ],
-          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c947/5b485d5dc07d490987354aff0446fb69/APP_ICON?versionId=18bpYdwVCEpa9HewAsTtoEhUDkoA6vUG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190612T163349Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190612%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=344fec8b2d04bcda9731c58de4ca5513dac83bc43ad01d003d972f5514681076",
-          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4917/c1642b610e7e46ff919ee77c837d3231/APP_ICON_LARGE?versionId=Q0x4gphah991SF6UxjcSC_FViQo5GXPn&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190612T163349Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190612%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e4eb9f88766dea9cfeefb3b849d0c0ccfcee82317cdeb333d3066a96fd7fa890"
-        }
-      }
-    },
-    "privacyAndCompliance": {
-      "allowsPurchases": true,
-      "isExportCompliant": true,
-      "containsAds": false,
-      "isChildDirected": false,
-      "usesPersonalInfo": true,
-      "locales": {
-        "en-US": {
-          "privacyPolicyUrl": "https://reverb.ai/privacy/",
-          "termsOfUseUrl": ""
-        },
-        "en-GB": {
-          "privacyPolicyUrl": "https://reverb.ai/privacy/",
-          "termsOfUseUrl": ""
-        }
-      }
-    },
-    "manifestVersion": "1.0"
+      "distributionCountries": []
+    }
   }
 }

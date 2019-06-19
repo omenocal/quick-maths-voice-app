@@ -1,0 +1,117 @@
+{
+  "version": "1.0",
+  "type": "SUBSCRIPTION",
+  "referenceName": "competition",
+  "subscriptionInformation": {
+    "subscriptionPaymentFrequency": "MONTHLY",
+    "subscriptionTrialPeriodDays": 0
+  },
+  "publishingInformation": {
+    "locales": {
+      "en-US": {
+        "name": "Quick Maths Competition",
+        "summary": "Alexa can help you practice maths with the Quick Maths game, and while you practice you can compete with other people around the world.",
+        "description": "Every month you will have the opportunity to prove you are fastest maths genius with Quick Maths around the world. Enter the competition and get as many points as you can to be among the 10 best players that will be announced next time you open the skill after the competition is over.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/f43a/660afb9927f245189b558afa52e71a9e/APP_ICON?versionId=msUSRcIFw7F2aogrH9NC9ImUmCB4Q8hS&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T205642Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=be320f355e0c5ba660fed4bc51d2789b90d0d6a055a30d0ea8c26c576a280ca0",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/592a/7d02e45701bd458893b0e0ced6b28ec3/APP_ICON_LARGE?versionId=FmOB2cL_j5rc1xSohkGEXdvA81whq6kX&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T205642Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=bbcc9568dfaed55ddf6621498d15bedd2f0f2d4bce588e57f6c30ea170eb0b54",
+        "examplePhrases": [
+          "Alexa, enter the competition"
+        ],
+        "keywords": [
+          "quick",
+          "maths",
+          "calculation",
+          "competition",
+          "world",
+          "best"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "All players who want to enter the competition for this month, need to buy the ticket valid until the end of the month. Let the world know who's the best",
+          "boughtCardDescription": "Thank you for entering the monthly Quick Maths competition! We wish you the best of luck. Enjoy!"
+        }
+      },
+      "en-GB": {
+        "name": "Quick Maths Competition",
+        "summary": "Alexa can help you practice maths with the Quick Maths game, and while you practice you can compete with other people around the world.",
+        "description": "Every month you will have the opportunity to prove you are fastest maths genius with Quick Maths around the world. Enter the competition and get as many points as you can to be among the 10 best players that will be announced next time you open the skill after the competition is over.",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/eb9e/12f3f9bd0b934cd496b27527f0d2327e/APP_ICON?versionId=u_gq66OB7RJKAxex27DuZZ_Tws_0qMoO&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T205642Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b048bca8aa75311d805ec688949330b5ba739fd0fa678765d7336c5e495afc7b",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/19e6/01fc75a6d3bc41a78caf4685ba451dce/APP_ICON_LARGE?versionId=hRDNMWOx4zz95I3mxGkqY1Pg1NpJhRW9&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190619T205642Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=73a94fa861db34799a560c90c56489a017011d8040c6389bebc520ce76658efe",
+        "examplePhrases": [
+          "Alexa, enter the competition"
+        ],
+        "keywords": [
+          "quick",
+          "maths",
+          "calculation",
+          "competition",
+          "world",
+          "best"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "All players who want to enter the competition for this month, need to buy the ticket valid until the end of the month. Let the world know who's the best",
+          "boughtCardDescription": "Thank you for entering the monthly Quick Maths competition! We wish you the best of luck. Enjoy!"
+        }
+      }
+    },
+    "distributionCountries": [
+      "BE",
+      "BG",
+      "CY",
+      "CZ",
+      "DK",
+      "EE",
+      "FI",
+      "GB",
+      "GG",
+      "GI",
+      "GR",
+      "HR",
+      "HU",
+      "IE",
+      "LT",
+      "LV",
+      "MT",
+      "NL",
+      "NO",
+      "PL",
+      "PT",
+      "RO",
+      "SE",
+      "SI",
+      "SK",
+      "UA",
+      "US"
+    ],
+    "pricing": {
+      "amazon.com": {
+        "releaseDate": "2019-07-15T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "USD"
+        }
+      },
+      "amazon.co.uk": {
+        "releaseDate": "2019-07-15T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "GBP"
+        }
+      }
+    },
+    "taxInformation": {
+      "category": "SOFTWARE"
+    }
+  },
+  "privacyAndCompliance": {
+    "locales": {
+      "en-US": {
+        "privacyPolicyUrl": "https://octaviomenocalcordero.wordpress.com/2019/06/12/quick-maths-for-amazon-alexa-privacy-policy/"
+      },
+      "en-GB": {
+        "privacyPolicyUrl": "https://octaviomenocalcordero.wordpress.com/2019/06/12/quick-maths-for-amazon-alexa-privacy-policy/"
+      }
+    }
+  },
+  "testingInstructions": "Say 'enter the competition', and get the monthly subscription to enter the competition. At the end of the month there will be a final winner and the competition will restart.",
+  "purchasableState": "PURCHASABLE"
+}

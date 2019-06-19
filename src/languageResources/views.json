@@ -8,6 +8,10 @@
           ],
           "reprompt": [
             "Should we start the math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "ReturningUserReminder1": {
@@ -16,6 +20,10 @@
           ],
           "reprompt": [
             "Do you want to enter the competition, or start a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "ReturningUserReminder2": {
@@ -24,6 +32,10 @@
           ],
           "reprompt": [
             "Do you want to enter the competition, or start a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "ReturningUserReminder3": {
@@ -32,6 +44,10 @@
           ],
           "reprompt": [
             "Do you want to enter the competition, or start a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "ReturningUser": {
@@ -40,6 +56,10 @@
           ],
           "reprompt": [
             "Should we start the math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         }
       },
@@ -50,6 +70,54 @@
           ],
           "reprompt": [
             "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "PurchaseStatus": {
+          "ok": {
+            "say": [
+              "Excellent! You have bought the Quick Maths competition. "
+            ]
+          },
+          "alreadyowned": {
+            "say": [
+              "It only takes a few minutes before you can start using your subscription. "
+            ]
+          },
+          "itemchangerequested": {
+            "say": [
+              "Your registration was not completed due to a cancelation in the process. But no worries, you can register any time when you're ready. In the meantime, "
+            ]
+          },
+          "usercancelled": {
+            "say": [
+              "Your registration was not completed due to a cancelation in the process. But no worries, you can register any time when you're ready. In the meantime, "
+            ]
+          },
+          "error": {
+            "say": [
+              "An unusual error has occurred. We\\'re aware of it, and working on fixing it. Check back again in a few minutes. In the meantime, "
+            ]
+          },
+          "unspecified": {
+            "say": [
+              "An unusual error has occurred. We\\'re aware of it, and working on fixing it. Check back again in a few minutes. In the meantime, "
+            ]
+          }
+        },
+        "Accepted": {
+          "ask": [
+            "Welcome to the competition of this month. You'll compete to win the first place in this game played by thousands of people around the world. Guess as many operations as you can during this month. When you come back next month, I'll tell you your final score and position. Do you want to play a game now?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "AccountLink": {
@@ -66,18 +134,237 @@
         "AddressPermissionCard": "{addressPermissionCard}",
         "IspRejected": {
           "ask": [
-            "No problem. You can enter the competition when you are ready. Do you want to start a new game now?"
+            "Do you want to start a new game now?"
           ],
           "reprompt": [
             "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "Position": {
+          "ask": [
+            "You are currently in the slot number {position} with {totalPoints}. And there are {totalPlayers} players competing to be the best of the best. Tell me, do you want to play?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "NoScore": {
+          "ask": [
+            "You don't have points this month. Would you like to start a game?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "NotRegistered": {
+          "ask": [
+            "I'm sorry, but to do that, you need to enter the competition. Simply say: enter the competition. Would you like to play?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "Refund": {
+          "Confirm": {
+            "ask": [
+              "I'm sorry to hear you want to leave the competition. You can come back next month to participate again if you want to. As for this month, if you want to enter the competition again, you will need to pay the entrance fee. The good news is that I will keep your score. Are you sure you want to leave the competition?"
+            ],
+            "reprompt": [
+              "Are you sure you want to leave the competition?"
+            ],
+            "dialogflowSuggestions": [
+              "Yes 👍",
+              "No 👎"
+            ]
+          },
+          "NotCancel": {
+            "ask": [
+              "Great! I'm glad you want to keep playing. To celebrate that, what about a game?"
+            ],
+            "reprompt": [
+              "Should we start a math game?"
+            ],
+            "dialogflowSuggestions": [
+              "Yes 👍",
+              "No 👎"
+            ]
+          },
+          "NotSubscribed": {
+            "ask": [
+              "I can't offer a refund because you have not registered to this month's competition yet. If you want to do that, simply say: enter the competition. Would you like to start a game?"
+            ],
+            "reprompt": [
+              "Should we start a math game?"
+            ],
+            "dialogflowSuggestions": [
+              "Yes 👍",
+              "No 👎"
+            ]
+          },
+          "GoogleMoreInformation": {
+            "say": [
+              "To get more information about refund, read the instructions in the Google Play guidelines website. <break time=\"0.5s\"/>"
+            ]
+          },
+          "GoogleMoreInformationScreen": {
+            "say": [
+              "Click on the button below, to open your browser and visit the Google Help Center. <break time=\"0.5s\"/>"
+            ]
+          },
+          "GooglePlayHelp": "Google Play Help",
+          "NotToAlexa": {
+            "ask": [
+              "Great! I'm glad you want to keep playing. Let's start over with a new game. Would you like to play now?"
+            ],
+            "reprompt": [
+              "Are you up for a game?"
+            ]
+          },
+          "YesToAlexa": {
+            "ask": [
+              "You can enter the competition any time when you want. Would you like to play now?"
+            ],
+            "reprompt": [
+              "Are you up for a game?"
+            ]
+          }
+        },
+        "RemainingDays": {
+          "say": [
+            "This month's competition ends {timeRemaining}, that means, you still have the chance to get the first place this month. "
+          ]
+        },
+        "Score": {
+          "ask": [
+            "You have {totalPoints} this month. Would you like to start a game?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ],
+          "points": "1 point",
+          "points_plural": "{{count}} points"
+        },
+        "SignUp": {
+          "Location": "Finally. To keep track of your points every month",
+          "PermissionDenied": {
+            "ask": [
+              "I can't complete your registration unless you provide permission to access your location. Meanwhile, would you like to play a game?"
+            ],
+            "reprompt": [
+              "Should we start a math game?"
+            ],
+            "dialogflowSuggestions": [
+              "Yes 👍",
+              "No 👎"
+            ]
+          }
+        },
+        "StartGame": {
+          "ask": [
+            "So, would you like to start a game?"
+          ],
+          "reprompt": [
+            "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "SubscriptionAccepted": {
           "ask": [
-            "<audio src=\"\"> Awesome! You're now part of the monthly competition. Remember your goal, to be the top player of the month with most points. Do you want to play now?"
+            "That means you are now part of the monthly competition. Remember your goal, to be the top player of the month with most points. Do you want to play now?"
           ],
           "reprompt": [
             "Should we start a math game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "SubscriptionReminder": {
+          "say": [
+            "If you want to participate, simply say: enter the competition, and then I'll set you up! If you don't want to participate right now, that's ok. You can come back any time. "
+          ]
+        },
+        "ResultsTitle": "10 best players of the month",
+        "ResultsItem": "{{order}}. {{name}}, {{city}} => 1 point",
+        "ResultsItem_plural": "{{order}}. {{name}}, {{city}} => {{count}} points",
+        "ResultsItemScreen": "1 point",
+        "ResultsItemScreen_plural": "{{count}} points",
+        "TableHeaders": {
+          "Position": "Position",
+          "Player": "Player",
+          "City": "City",
+          "Victories": "Victories"
+        },
+        "WhatCanIBuyNotSubscribed": {
+          "ask": [
+            "Every month, we have the Quick Maths competition to know who is the best player in this game. To subscribe, you can simply say: enter the competition, and then I'll set you up! So, do you want to enter the competition, or play a game?"
+          ],
+          "reprompt": [
+            "Are you up for a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "WhatCanIBuy": {
+          "ask": [
+            "Every month, you can participate in the Quick Maths competition. And good news: you are subscribed to this month's competition! Keep playing and accumulating more victories to be the best player of the month. Tell me, do you want to play?"
+          ],
+          "reprompt": [
+            "Are you up for a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "WhatDidIBuyNotSubscribed": {
+          "ask": [
+            "You have not subscribed to this month's competition yet. To do so, simply say: enter the competition, and then I'll set you up! If you don't want to participate right now, that's ok. You can come back any time. So, do you want to enter the competition, or play a game?"
+          ],
+          "reprompt": [
+            "Are you up for a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
+        },
+        "WhatDidIBuy": {
+          "ask": [
+            "You are subscribed to the monthly Quick Maths competition! Keep playing and accumulating more points to be the best player of the month. I will announce the winner and the top 10 players at the end of the month. Tell me, do you want to play?"
+          ],
+          "reprompt": [
+            "Are you up for a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         }
       },
@@ -105,6 +392,10 @@
           ],
           "reprompt": [
             "Do you want to try again?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         },
         "WrongAnswer": {
@@ -115,13 +406,17 @@
           ],
           "reprompt": [
             "Do you want to try again?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
           ]
         }
       },
       "Fallback": {
         "NotUnderstood": {
           "say": [
-            "I'm sorry. I didn't get that."
+            "I'm sorry. I didn't get that. "
           ]
         }
       },
@@ -133,6 +428,11 @@
       "Exit": {
         "tell": [
           "Ok. Goodbye."
+        ]
+      },
+      "Error": {
+        "tell": [
+          "Sorry for the inconvenience. An unexpected error has occured. We're aware of this issue and working towards fixing it as soon as possible. Check back later on. Thanks!"
         ]
       }
     }

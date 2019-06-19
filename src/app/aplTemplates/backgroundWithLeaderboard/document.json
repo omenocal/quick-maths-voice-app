@@ -1,0 +1,334 @@
+{
+  "type": "APL",
+  "version": "1.0",
+  "theme": "dark",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.0.0"
+    }
+  ],
+  "resources": [
+    {
+      "description": "Stock color for the light theme",
+      "colors": {
+        "colorTextPrimary": "#151920"
+      }
+    },
+    {
+      "description": "Stock color for the dark theme",
+      "when": "${viewport.theme == 'dark'}",
+      "colors": {
+        "colorTextPrimary": "#f0f1ef"
+      }
+    },
+    {
+      "description": "Standard font sizes",
+      "dimensions": {
+        "textSizeBody": 48,
+        "textSizePrimary": 27,
+        "textSizeSecondary": 23,
+        "textSizeDetails": 20,
+        "textSizeSecondaryHint": 25
+      }
+    },
+    {
+      "description": "Common spacing values",
+      "dimensions": {
+        "spacingThin": 6,
+        "spacingSmall": 12,
+        "spacingMedium": 24,
+        "spacingLarge": 48,
+        "spacingExtraLarge": 72
+      }
+    },
+    {
+      "description": "Common margins and padding",
+      "dimensions": {
+        "marginTop": 40,
+        "marginLeft": 40,
+        "marginRight": 60,
+        "marginBottom": 40
+      }
+    }
+  ],
+  "styles": {
+    "textStyleBase": {
+      "description": "Base font description; set color and core font family",
+      "values": [
+        {
+          "color": "@colorTextPrimary",
+          "fontFamily": "Amazon Ember"
+        }
+      ]
+    },
+    "textStyleBase0": {
+      "description": "Thin version of basic font",
+      "extend": "textStyleBase",
+      "values": {
+        "fontWeight": "100"
+      }
+    },
+    "textStyleBase1": {
+      "description": "Light version of basic font",
+      "extend": "textStyleBase",
+      "values": {
+        "fontWeight": "300"
+      }
+    },
+    "textStyleBase2": {
+      "description": "Regular version of basic font",
+      "extend": "textStyleBase",
+      "values": {
+        "fontWeight": "500"
+      }
+    },
+    "mixinBody": {
+      "values": {
+        "fontSize": "@textSizeBody"
+      }
+    },
+    "mixinPrimary": {
+      "values": {
+        "fontSize": "@textSizePrimary"
+      }
+    },
+    "mixinDetails": {
+      "values": {
+        "fontSize": "@textSizeDetails"
+      }
+    },
+    "mixinSecondary": {
+      "values": {
+        "fontSize": "@textSizeSecondary"
+      }
+    },
+    "textStylePrimary": {
+      "extend": [
+        "textStyleBase1",
+        "mixinPrimary"
+      ]
+    },
+    "textStyleSecondary": {
+      "extend": [
+        "textStyleBase0",
+        "mixinSecondary"
+      ]
+    },
+    "textStyleBody": {
+      "extend": [
+        "textStyleBase1",
+        "mixinBody"
+      ]
+    },
+    "textStyleSecondaryHint": {
+      "values": {
+        "fontFamily": "Bookerly",
+        "fontStyle": "italic",
+        "fontSize": "@textSizeSecondaryHint",
+        "color": "@colorTextPrimary"
+      }
+    },
+    "textStyleDetails": {
+      "extend": [
+        "textStyleBase2",
+        "mixinDetails"
+      ]
+    }
+  },
+  "layouts": {
+    "ListTemplate1": {
+      "parameters": [
+        "backgroundColor",
+        "headerTitle",
+        "leaderboardBackgroundUrl",
+        "logo",
+        "listData"
+      ],
+      "item": [
+        {
+          "type": "Frame",
+          "item": {
+            "type": "Container",
+            "width": "100vw",
+            "height": "100vh",
+            "direction": "column",
+            "items": [
+              {
+                "type": "Image",
+                "source": "${leaderboardBackgroundUrl}",
+                "align": "center",
+                "position": "absolute",
+                "scale": "best-fill",
+                "width": "100vw",
+                "height": "100vh"
+              },
+              {
+                "type": "AlexaHeader",
+                "headerTitle": "${headerTitle}",
+                "headerAttributionImage": "${logo}"
+              },
+              {
+                "type": "Container",
+                "direction": "row",
+                "paddingLeft": "${@viewportProfile == @hubLandscapeLarge ? '170' : '150'}",
+                "when": "${viewport.shape != 'round'}",
+                "items": [
+                  {
+                    "type": "Text",
+                    "text": "PLAYER",
+                    "maxLines": 1,
+                    "fontSize": "${@viewportProfile == @hubLandscapeLarge ? '70dp' : '50dp'}",
+                    "textAlign": "left",
+                    "width": "50vw",
+                    "paddingLeft": "40"
+                  },
+                  {
+                    "type": "Text",
+                    "text": "POINTS",
+                    "fontSize": "${@viewportProfile == @hubLandscapeLarge ? '70dp' : '50dp'}",
+                    "paddingLeft": "40"
+                  }
+                ]
+              },
+              {
+                "type": "Sequence",
+                "grow": 1,
+                "width": "100vw",
+                "height": "60vh",
+                "scrollDirection": "vertical",
+                "paddingBottom": "@marginBottom",
+                "paddingLeft": "@marginLeft",
+                "paddingRight": "@marginRight",
+                "data": "${listData}",
+                "numbered": true,
+                "item": {
+                  "type": "TouchWrapper",
+                  "item": {
+                    "type": "VerticalListItem",
+                    "text": "${data.text}",
+                    "score": "${data.score}"
+                  }
+                }
+              },
+              {
+                "type": "Text",
+                "when": "${viewport.shape == 'round'}",
+                "height": "80dp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "VerticalListItem": {
+      "parameters": [
+        "score",
+        "text"
+      ],
+      "item": [
+        {
+          "when": "${@viewportProfile == @hubRoundSmall}",
+          "type": "Container",
+          "direction": "row",
+          "height": 120,
+          "width": "100vw",
+          "alignItems": "center",
+          "items": [
+            {
+              "type": "Frame",
+              "height": 70,
+              "width": 70,
+              "backgroundColor": "white",
+              "borderRadius": 100,
+              "item": {
+                "type": "Text",
+                "width": "70",
+                "height": "70",
+                "textAlign": "center",
+                "textAlignVertical": "center",
+                "color": "${backgroundColor}",
+                "text": "${ordinal}"
+              }
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "Text",
+                  "text": "${text}",
+                  "maxLines": 1,
+                  "fontSize": "35dp",
+                  "textAlign": "left",
+                  "width": "100vw",
+                  "paddingLeft": "40"
+                },
+                {
+                  "type": "Text",
+                  "text": "${score}",
+                  "fontSize": "30dp",
+                  "paddingLeft": "40"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "direction": "row",
+          "height": "${@viewportProfile == @hubLandscapeMedium ? 90 : (@viewportProfile == @hubLandscapeLarge ? 120 : 80)}",
+          "width": "100%",
+          "alignItems": "center",
+          "items": [
+            {
+              "type": "Frame",
+              "height": "${@viewportProfile == @hubLandscapeLarge ? 90 : 70}",
+              "width": "${@viewportProfile == @hubLandscapeLarge ? 90 : 70}",
+              "backgroundColor": "white",
+              "borderRadius": 100,
+              "item": {
+                "type": "Text",
+                "width": "${@viewportProfile == @hubLandscapeLarge ? 90 : 70}",
+                "height": "${@viewportProfile == @hubLandscapeLarge ? 90 : 70}",
+                "fontSize": "${@viewportProfile == @hubLandscapeLarge ? '50dp' : '30dp'}",
+                "textAlign": "center",
+                "textAlignVertical": "center",
+                "color": "${backgroundColor}",
+                "text": "${ordinal}"
+              }
+            },
+            {
+              "type": "Text",
+              "width": "60vw",
+              "maxLines": 1,
+              "text": "${text}",
+              "fontSize": "${@viewportProfile == @hubLandscapeLarge ? '70dp' : '50dp'}",
+              "paddingLeft": "@marginLeft"
+            },
+            {
+              "type": "Text",
+              "text": "${score}",
+              "fontSize": "${@viewportProfile == @hubLandscapeLarge ? '70dp' : '50dp'}",
+              "paddingLeft": "@marginLeft"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "item": [
+      {
+        "type": "ListTemplate1",
+        "backgroundColor": "${payload.listTemplate1Metadata.backgroundColor}",
+        "headerTitle": "${payload.listTemplate1Metadata.headerTitle}",
+        "leaderboardBackgroundUrl": "${payload.listTemplate1Metadata.leaderboardBackgroundUrl}",
+        "logo": "${payload.listTemplate1Metadata.logoUrl}",
+        "listData": "${payload.listTemplate1ListData.listPage.listItems}"
+      }
+    ]
+  }
+}

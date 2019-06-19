@@ -25,5 +25,9 @@
   },
   "alexa": {
     "subscriptionId": "competition"
+  },
+  "google": {
+    "androidPackageName": "androidPackageName",
+    "skus": ["quick_maths_competition_2019"]
   }
 }

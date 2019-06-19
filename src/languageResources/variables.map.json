@@ -5,6 +5,30 @@
   "addressPermissionCard": [
     "en"
   ],
+  "position": [
+    "en"
+  ],
+  "totalPoints": [
+    "en"
+  ],
+  "totalPlayers": [
+    "en"
+  ],
+  "timeRemaining": [
+    "en"
+  ],
+  "{count": [
+    "en"
+  ],
+  "{order": [
+    "en"
+  ],
+  "{name": [
+    "en"
+  ],
+  "{city": [
+    "en"
+  ],
   "number1": [
     "en"
   ],

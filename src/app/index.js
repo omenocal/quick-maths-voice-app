@@ -29,8 +29,16 @@ const voxaApp = new VoxaApp({
 });
 states(voxaApp);
 
+const googleConfig = {
+  transactionOptions: {
+    // Replacing android package name with env variable for privacy since the repo is public
+    androidAppPackageName: process.env.ANDROID_PACKAGE_NAME || config.google.androidPackageName,
+    keyFile: './client_secret.json',
+  },
+};
+
 exports.alexaSkill = new AlexaPlatform(voxaApp);
-exports.assistantAction = new GoogleAssistantPlatform(voxaApp);
+exports.assistantAction = new GoogleAssistantPlatform(voxaApp, googleConfig);
 
 // Replacing Dashbot keys with env variables for privacy since the repo is public
 config.dashbot.alexa = process.env.DASHBOT_ALEXA_KEY || config.dashbot.alexa;
@@ -48,6 +56,18 @@ voxaApp.onRequestStarted(async (voxaEvent) => {
   const user = await User.get(voxaEvent);
 
   voxaEvent.model.user = user;
+
+  const userInfo = await voxaEvent.getUserInformation();
+  voxaEvent.model.saveUserInfo(userInfo);
+
+  if (voxaEvent.alexa) {
+    try {
+      const info = await voxaEvent.alexa.deviceAddress.getAddress();
+      voxaEvent.model.saveUserAddress(info);
+    } catch (err) {
+      console.log('competition err', err);
+    }
+  }
 });
 
 /**
@@ -67,6 +87,8 @@ voxaApp.onBeforeReplySent(async (voxaEvent, reply, transition) => {
   await user.save({ userId: voxaEvent.user.userId });
 
   voxaEvent.model.reply = _.pickBy({
+    dialogflowLinkOutSuggestion: transition.dialogflowLinkOutSuggestion,
+    dialogflowSuggestions: transition.dialogflowSuggestions,
     directives: transition.directives,
     flow: transition.flow,
     reprompt: transition.reprompt,
@@ -82,11 +104,15 @@ voxaApp.onUnhandledState((voxaEvent) => {
 
   const lastReply = voxaEvent.model.reply.say;
   const lastReprompt = _.get(voxaEvent, 'model.reply.reprompt');
+  const dialogflowLinkOutSuggestion = _.get(voxaEvent, 'model.reply.dialogflowLinkOutSuggestion');
+  const dialogflowSuggestions = _.get(voxaEvent, 'model.reply.dialogflowSuggestions');
   const directives = _.get(voxaEvent, 'model.reply.directives');
   let reply = _.isArray(lastReply) ? _.last(lastReply) : lastReply;
   reply = _.filter(_.concat('Fallback.NotUnderstood.say', reply));
 
   const response = {
+    dialogflowLinkOutSuggestion,
+    dialogflowSuggestions,
     directives,
     flow: 'yield',
     reprompt: lastReprompt,
@@ -96,5 +122,17 @@ voxaApp.onUnhandledState((voxaEvent) => {
 
   return response;
 });
+
+voxaApp.onError((voxaEvent, error, reply) => {
+  console.log('error', error);
+
+  const statement = _.head(voxaEvent.t('Error.tell', { returnObjects: true }));
+
+  reply.clear();
+  reply.addStatement(statement);
+  reply.terminate();
+
+  return reply;
+}, true);
 
 exports.voxaApp = voxaApp;
