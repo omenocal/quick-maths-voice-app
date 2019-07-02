@@ -71,6 +71,15 @@
   "Competition.PurchaseStatus.unspecified.say": [
     "en"
   ],
+  "Competition.PurchaseStatusFollowUp.ask": [
+    "en"
+  ],
+  "Competition.PurchaseStatusFollowUp.reprompt": [
+    "en"
+  ],
+  "Competition.PurchaseStatusFollowUp.dialogflowSuggestions": [
+    "en"
+  ],
   "Competition.Accepted.ask": [
     "en"
   ],
@@ -80,7 +89,10 @@
   "Competition.Accepted.dialogflowSuggestions": [
     "en"
   ],
-  "Competition.AccountLink.tell": [
+  "Competition.AccountLinkGoogle.tell": [
+    "en"
+  ],
+  "Competition.AccountLinkAlexa.tell": [
     "en"
   ],
   "Competition.AccountLinkingCard": [
@@ -195,6 +207,15 @@
     "en"
   ],
   "Competition.SignUp.Location": [
+    "en"
+  ],
+  "Competition.SignUp.AccountDenied.ask": [
+    "en"
+  ],
+  "Competition.SignUp.AccountDenied.reprompt": [
+    "en"
+  ],
+  "Competition.SignUp.AccountDenied.dialogflowSuggestions": [
     "en"
   ],
   "Competition.SignUp.PermissionDenied.ask": [

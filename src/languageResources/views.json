@@ -89,24 +89,36 @@
           },
           "itemchangerequested": {
             "say": [
-              "Your registration was not completed due to a cancelation in the process. But no worries, you can register any time when you're ready. In the meantime, "
+              "Your registration was not completed due to a cancelation in the process. But no worries, you can register any time when you're ready."
             ]
           },
           "usercancelled": {
             "say": [
-              "Your registration was not completed due to a cancelation in the process. But no worries, you can register any time when you're ready. In the meantime, "
+              "Your registration was not completed due to a cancelation in the process. But no worries, you can register any time when you're ready."
             ]
           },
           "error": {
             "say": [
-              "An unusual error has occurred. We\\'re aware of it, and working on fixing it. Check back again in a few minutes. In the meantime, "
+              "An unusual error has occurred. We're aware of it, and working on fixing it. Check back again in a few minutes."
             ]
           },
           "unspecified": {
             "say": [
-              "An unusual error has occurred. We\\'re aware of it, and working on fixing it. Check back again in a few minutes. In the meantime, "
+              "An unusual error has occurred. We're aware of it, and working on fixing it. Check back again in a few minutes."
             ]
           }
+        },
+        "PurchaseStatusFollowUp": {
+          "ask": [
+            "In the meantime, would you like to play a game?"
+          ],
+          "reprompt": [
+            "Would you like to play a game?"
+          ],
+          "dialogflowSuggestions": [
+            "Yes 👍",
+            "No 👎"
+          ]
         },
         "Accepted": {
           "ask": [
@@ -120,7 +132,12 @@
             "No 👎"
           ]
         },
-        "AccountLink": {
+        "AccountLinkGoogle": {
+          "tell": [
+            "Great! To participate in the competition"
+          ]
+        },
+        "AccountLinkAlexa": {
           "tell": [
             "Great! First of all, I need to know your name and email to save your score. I just sent a card to your Alexa app, click on the label and link your Amazon account. Once you complete it, open the skill again. See you soon!"
           ]
@@ -266,6 +283,18 @@
         },
         "SignUp": {
           "Location": "Finally. To keep track of your points every month",
+          "AccountDenied": {
+            "ask": [
+              " Meanwhile, would you like to play a game?"
+            ],
+            "reprompt": [
+              "Should we start a math game?"
+            ],
+            "dialogflowSuggestions": [
+              "Yes 👍",
+              "No 👎"
+            ]
+          },
           "PermissionDenied": {
             "ask": [
               "I can't complete your registration unless you provide permission to access your location. Meanwhile, would you like to play a game?"

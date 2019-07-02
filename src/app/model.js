@@ -148,6 +148,15 @@ class Model {
     return this.user.hasPoints(competitionId);
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  isUserLoggedIn(voxaEvent) {
+    if (voxaEvent.alexa) {
+      return !!voxaEvent.user.accessToken;
+    }
+
+    return !!voxaEvent.dialogflow.conv.user.profile.token;
+  }
+
   async isUserSubscribed(voxaEvent) {
     const product = await this.getProduct(voxaEvent);
 

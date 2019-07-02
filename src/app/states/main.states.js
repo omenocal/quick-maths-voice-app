@@ -33,7 +33,7 @@ function register(voxaApp) {
   voxaApp.onState('begin', (voxaEvent) => {
     const intentName = voxaEvent.intent.name;
 
-    if (intentName === 'YesIntent') {
+    if (_.includes(['WelcomeIntent', 'YesIntent'], intentName)) {
       voxaEvent.model.selectOperation(voxaEvent);
 
       return {

@@ -57,8 +57,10 @@ voxaApp.onRequestStarted(async (voxaEvent) => {
 
   voxaEvent.model.user = user;
 
-  const userInfo = await voxaEvent.getUserInformation();
-  voxaEvent.model.saveUserInfo(userInfo);
+  if (voxaEvent.model.isUserLoggedIn(voxaEvent)) {
+    const userInfo = await voxaEvent.getUserInformation();
+    voxaEvent.model.saveUserInfo(userInfo);
+  }
 
   if (voxaEvent.alexa) {
     try {

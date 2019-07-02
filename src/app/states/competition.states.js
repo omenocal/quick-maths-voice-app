@@ -111,12 +111,14 @@ function register(voxaApp) {
     };
   });
 
-  voxaApp.onIntent('actions_intent_PERMISSION', (voxaEvent) => {
+  voxaApp.onIntent('CompletePermissionIntent', (voxaEvent) => {
     const { device } = voxaEvent.rawEvent.originalDetectIntentRequest.payload;
+    const city = _.get(device, 'location.city') || '';
     const { latitude, longitude } = _.get(device, 'location.coordinates') || {};
 
     if (latitude && longitude) {
       voxaEvent.model.saveUserAddress({
+        city,
         latitude,
         longitude,
       });
@@ -128,6 +130,27 @@ function register(voxaApp) {
 
     return {
       reply: 'Competition.SignUp.PermissionDenied',
+      to: 'begin',
+    };
+  });
+
+  voxaApp.onIntent('CompleteSignInIntent', async (voxaEvent) => {
+    let userInfo;
+
+    if (voxaEvent.model.isUserLoggedIn(voxaEvent)) {
+      userInfo = await voxaEvent.getUserInformation();
+    }
+
+    if (userInfo) {
+      voxaEvent.model.saveUserInfo(userInfo);
+
+      return {
+        to: 'competition',
+      };
+    }
+
+    return {
+      reply: 'Competition.SignUp.AccountDenied',
       to: 'begin',
     };
   });
@@ -155,7 +178,7 @@ function register(voxaApp) {
     }
 
     return {
-      reply: [`Competition.PurchaseStatus.${label}`, 'Competition.StartGame'],
+      reply: [`Competition.PurchaseStatus.${label}`, 'Competition.PurchaseStatusFollowUp'],
       to: 'begin',
     };
   });
@@ -206,10 +229,17 @@ function register(voxaApp) {
       };
     }
 
-    if (!voxaEvent.user.accessToken) {
+    if (!voxaEvent.model.isUserLoggedIn(voxaEvent)) {
+      if (voxaEvent.alexa) {
+        return {
+          alexaCard: 'Competition.AccountLinkingCard',
+          reply: 'Competition.AccountLinkAlexa',
+          to: 'die',
+        };
+      }
+
       return {
-        alexaCard: 'Competition.AccountLinkingCard',
-        reply: 'Competition.AccountLink',
+        dialogflowAccountLinkingCard: 'Competition.AccountLinkGoogle.tell',
         to: 'die',
       };
     }
