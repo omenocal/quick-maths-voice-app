@@ -3,7 +3,7 @@ set -ev
 
 mkdir .nyc_output
 
-yarn run test
+yarn run test-ci
 yarn run report
 yarn run lint
 npx nyc check-coverage
