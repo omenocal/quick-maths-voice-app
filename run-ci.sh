@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ev
 
+mkdir .nyc_output
+
 yarn run test
 yarn run report
 yarn run lint
