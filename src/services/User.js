@@ -4,11 +4,10 @@ const { DynamoDB } = require('aws-sdk');
 const _ = require('lodash');
 const config = require('../config');
 
-const client = new DynamoDB.DocumentClient();
-
 class User {
   static async get(voxaEvent) {
     const key = { userId: voxaEvent.user.userId };
+    const client = new DynamoDB.DocumentClient();
 
     const item = await client
       .get({ Key: key, TableName: config.dynamoDB.tables.users })
@@ -22,6 +21,8 @@ class User {
       reminderCount: 0,
       sessionCount: 0,
     };
+
+    this.client = new DynamoDB.DocumentClient();
     this.data = { ...defaults, ...data };
   }
 
@@ -53,7 +54,7 @@ class User {
       params.ExclusiveStartKey = lastEvaluatedKey;
     }
 
-    const result = await client.scan(params).promise();
+    const result = await this.client.scan(params).promise();
     const items = _.concat(previousItems, result.Items || []);
 
     if (_.isEmpty(result.LastEvaluatedKey)) {
@@ -154,7 +155,7 @@ class User {
     }
 
     data.modifiedDate = new Date().toISOString();
-    return client
+    return this.client
       .put({
         Item: data,
         TableName: config.dynamoDB.tables.users,

@@ -12,7 +12,7 @@
     }
   },
   "s3": {
-    "bucket": ""
+    "bucket": "bucket"
   },
   "dashbot": {
     "suppressSending": true,
@@ -20,7 +20,7 @@
     "google": "key"
   },
   "googleAnalytics": {
-    "trackingId": "",
+    "trackingId": "xxx",
     "suppressSending": false
   },
   "alexa": {

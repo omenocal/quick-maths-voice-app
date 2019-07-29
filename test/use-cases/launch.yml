@@ -1,7 +1,8 @@
 User launches the skill:
-  - afterEach: clear
+  - beforeEach: 'launch'
+  - afterEach: 'clear'
   - LaunchIntent:
-      alexaVariable:
-        name: World
-      alexaResponse: Launch.StartResponse
+      alexaResponse: Launch.FirstTimeUser
+  - AMAZON.StopIntent:
+      alexaResponse: Exit
       shouldEndSession: true
