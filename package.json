@@ -30,6 +30,7 @@
     "ask-cli": "^1.7.9",
     "aws-sdk-mock": "^4.5.0",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.5",
     "del": "^5.0.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^13.2.0",
