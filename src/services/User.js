@@ -100,7 +100,7 @@ class User {
     const currentCompetition = _.find(competitions, { competitionId });
 
     const playersArray = _(allUsers)
-      .map(x => _.find(x.competitions, { competitionId }))
+      .map((x) => _.find(x.competitions, { competitionId }))
       .compact()
       .orderBy(['score'], ['desc'])
       .map('score')

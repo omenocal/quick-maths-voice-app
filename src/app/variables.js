@@ -9,21 +9,21 @@ exports.addressPermissionCard = () => ({
   ],
 });
 
-exports.answer = voxaEvent => voxaEvent.model.answer;
+exports.answer = (voxaEvent) => voxaEvent.model.answer;
 
-exports.number1 = voxaEvent => voxaEvent.model.number1;
+exports.number1 = (voxaEvent) => voxaEvent.model.number1;
 
-exports.number2 = voxaEvent => voxaEvent.model.number2;
+exports.number2 = (voxaEvent) => voxaEvent.model.number2;
 
-exports.operator = voxaEvent => voxaEvent.model.operator;
+exports.operator = (voxaEvent) => voxaEvent.model.operator;
 
-exports.operatorName = voxaEvent => voxaEvent.model.operatorName;
+exports.operatorName = (voxaEvent) => voxaEvent.model.operatorName;
 
-exports.pointsEarned = voxaEvent => voxaEvent.model.pointsEarned;
+exports.pointsEarned = (voxaEvent) => voxaEvent.model.pointsEarned;
 
-exports.position = voxaEvent => voxaEvent.model.position;
+exports.position = (voxaEvent) => voxaEvent.model.position;
 
-exports.totalPlayers = voxaEvent => voxaEvent.model.totalPlayers;
+exports.totalPlayers = (voxaEvent) => voxaEvent.model.totalPlayers;
 
 exports.totalPoints = (voxaEvent) => {
   const count = voxaEvent.model.totalPoints;
@@ -31,4 +31,4 @@ exports.totalPoints = (voxaEvent) => {
   return voxaEvent.t('Competition.Score.points', { count });
 };
 
-exports.timeRemaining = voxaEvent => voxaEvent.model.getTimeRemaining();
+exports.timeRemaining = (voxaEvent) => voxaEvent.model.getTimeRemaining();
