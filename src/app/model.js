@@ -99,7 +99,8 @@ class Model {
       return voxaEvent.alexa.isp.getProductByReferenceName(config.alexa.subscriptionId);
     }
 
-    const packageName = config.google.androidPackageName;
+    // Replacing android package name with env variable for privacy since the repo is public
+    const packageName = process.env.ANDROID_PACKAGE_NAME || config.google.androidPackageName;
 
     const { packageEntitlements } = voxaEvent.rawEvent.originalDetectIntentRequest.payload.user;
     console.log('packageEntitlements', JSON.stringify(packageEntitlements, null, 2));
@@ -275,6 +276,12 @@ class Model {
 
   // eslint-disable-next-line class-methods-use-this
   showWinnersDashboard(voxaEvent, allUsers, competitionId) {
+    let { locale } = voxaEvent.request;
+
+    if (voxaEvent.google) {
+      locale = _.get(voxaEvent, 'rawEvent.originalDetectIntentRequest.payload.user.locale');
+    }
+
     const playerArray = _(_.cloneDeep(allUsers))
       .map((x) => {
         const player = _.find(x.competitions, { competitionId });
@@ -285,7 +292,7 @@ class Model {
 
         player.count = player.score;
         player.name = _.capitalize(_.words(x.name || 'Anonymous')[0]);
-        player.city = _.capitalize(x.city) || voxaEvent.request.locale.split('-')[1];
+        player.city = x.city ? _.capitalize(x.city) : locale.split('-')[1];
 
         delete player.score;
         return player;

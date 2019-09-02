@@ -33,7 +33,7 @@ const googleConfig = {
   transactionOptions: {
     // Replacing android package name with env variable for privacy since the repo is public
     androidAppPackageName: process.env.ANDROID_PACKAGE_NAME || config.google.androidPackageName,
-    keyFile: './client_secret.json',
+    keyFile: './src/client_secret.json',
   },
 };
 

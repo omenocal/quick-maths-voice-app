@@ -4,8 +4,8 @@
     "objectId": "lt1Metadata",
     "backgroundColor": "#000000",
     "headerTitle": "What's your choice?",
-    "leaderboardBackgroundUrl": "https://s3.amazonaws.com/rock-paper-scissors-lizard-spock-skill/images/leaderboard_background.jpg",
-    "logoUrl": "https://s3.amazonaws.com/rock-paper-scissors-lizard-spock-skill/images/rpsls_512.png"
+    "leaderboardBackgroundUrl": "https://quick-maths-alexa-skill.s3.amazonaws.com/images/leaderboard_background.jpg",
+    "logoUrl": "https://quick-maths-alexa-skill.s3.amazonaws.com/images/skillIcon.jpg"
   },
   "listTemplate1ListData": {
     "type": "list",
