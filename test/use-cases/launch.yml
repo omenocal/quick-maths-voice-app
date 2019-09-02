@@ -1,8 +1,56 @@
-User launches the skill:
+User launches the skill and starts the game, answers correctly:
   - beforeEach: 'launch'
   - afterEach: 'clear'
   - LaunchIntent:
       alexaResponse: Launch.FirstTimeUser
+  - AMAZON.YesIntent:
+      alexaVariable:
+        number1: 5
+        number2: 5
+        operator: '+'
+        operatorName: 'plus'
+      alexaResponse: Operation.Expression
+  - NumberIntent:
+      slots:
+        number: '10'
+      alexaVariable:
+        pointsEarned: 10
+      alexaResponse: Operation.RightAnswerExpression, Operation.RightAnswer
+  - AMAZON.StopIntent:
+      alexaResponse: Exit
+      shouldEndSession: true
+
+User launches the skill and starts the game, answers incorrectly first time:
+  - beforeEach: 'launch'
+  - afterEach: 'clear'
+  - LaunchIntent:
+      alexaResponse: Launch.FirstTimeUser
+  - AMAZON.YesIntent:
+      alexaVariable:
+        number1: 5
+        number2: 5
+        operator: '+'
+        operatorName: 'plus'
+      alexaResponse: Operation.Expression
+  - NumberIntent:
+      slots:
+        number: '11'
+      alexaVariable:
+        answer: 10
+      alexaResponse: Operation.WrongAnswer
+  - AMAZON.YesIntent:
+      alexaVariable:
+        number1: 5
+        number2: 5
+        operator: '+'
+        operatorName: 'plus'
+      alexaResponse: Operation.Expression
+  - NumberIntent:
+      slots:
+        number: '10'
+      alexaVariable:
+        pointsEarned: 10
+      alexaResponse: Operation.RightAnswerExpression, Operation.RightAnswer
   - AMAZON.StopIntent:
       alexaResponse: Exit
       shouldEndSession: true

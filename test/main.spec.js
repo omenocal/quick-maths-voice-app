@@ -1,5 +1,6 @@
 'use strict';
 
+const _ = require('lodash');
 const mime = require('alexa-mime');
 const AWS = require('aws-sdk');
 const AWSMock = require('aws-sdk-mock');
@@ -18,6 +19,9 @@ const describeWrapper = {
     nock.cleanAll();
   },
   launch: () => {
+    simple.mock(_, 'random').returnWith(5);
+    simple.mock(_, 'sample', _.head);
+
     AWSMock.mock('DynamoDB.DocumentClient', 'get', (params, cb) => {
       cb(undefined, {});
     });
