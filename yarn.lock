@@ -133,7 +133,7 @@
     "@sinonjs/commons" "^1"
     "@sinonjs/samsam" "^3.1.0"
 
-"@sinonjs/samsam@^3.1.0", "@sinonjs/samsam@^3.3.2":
+"@sinonjs/samsam@^3.1.0", "@sinonjs/samsam@^3.3.3":
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-3.3.3.tgz#46682efd9967b259b81136b9f120fd54585feb4a"
   integrity sha512-bKCMKZvWIjYD0BLGnNrxVuw4dkWCYsLqFOUWw8VgKF/+5Y+mE7LfHWPIYoDXowH+3a9LsWDMo0uAP8YDosPvHQ==
@@ -5367,7 +5367,7 @@ nimnjs@^1.3.2:
     nimn-date-parser "^1.0.0"
     nimn_schema_builder "^1.0.0"
 
-nise@^1.5.1:
+nise@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/nise/-/nise-1.5.2.tgz#b6d29af10e48b321b307e10e065199338eeb2652"
   integrity sha512-/6RhOUlicRCbE9s+94qCUsyE+pKlVJ5AhIv+jEE7ESKwnbXqulKZ1FYU+XAtHHWE9TinYvAxDUJAb912PwPoWA==
@@ -6876,16 +6876,16 @@ sinon@^1.17.3:
     util ">=0.10.3 <1"
 
 sinon@^7.3.2:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.4.1.tgz#bcd0c63953893e87fa0cc502f52489c32a83d4d9"
-  integrity sha512-7s9buHGHN/jqoy/v4bJgmt0m1XEkCEd/tqdHXumpBp0JSujaT4Ng84JU5wDdK4E85ZMq78NuDe0I3NAqXY8TFg==
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.4.2.tgz#ecd54158fef2fcfbdb231a3fa55140e8cb02ad6c"
+  integrity sha512-pY5RY99DKelU3pjNxcWo6XqeB1S118GBcVIIdDi6V+h6hevn1izcg2xv1hTHW/sViRXU7sUOxt4wTUJ3gsW2CQ==
   dependencies:
     "@sinonjs/commons" "^1.4.0"
     "@sinonjs/formatio" "^3.2.1"
-    "@sinonjs/samsam" "^3.3.2"
+    "@sinonjs/samsam" "^3.3.3"
     diff "^3.5.0"
     lolex "^4.2.0"
-    nise "^1.5.1"
+    nise "^1.5.2"
     supports-color "^5.5.0"
 
 slash@^3.0.0:
@@ -7097,10 +7097,10 @@ snyk-resolve@1.0.1, snyk-resolve@^1.0.0, snyk-resolve@^1.0.1:
     debug "^3.1.0"
     then-fs "^2.0.0"
 
-snyk-sbt-plugin@2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/snyk-sbt-plugin/-/snyk-sbt-plugin-2.7.0.tgz#2b28cf5742b52bf38c76c1973324835adaf947e7"
-  integrity sha512-qQSPkiyd/WNfo0z8MDK+87iIIT2wCn+k6tl9mx0VoNJo/z5jJLAoIc41zkGt/K8TjxA7VF1PV5B3tHqBp1xAVA==
+snyk-sbt-plugin@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/snyk-sbt-plugin/-/snyk-sbt-plugin-2.8.0.tgz#6812e1df1c311e99a7aa565559032c7511d1e4d4"
+  integrity sha512-ZzyBdND5CsaO0xkv05geZXu8Dd6Llvr/5oTj811U7h7UmrvljrAiABW4RGjRJPrPVuuJaDej2p633sgGtK9UsA==
   dependencies:
     semver "^6.1.2"
     tmp "^0.1.0"
@@ -7125,9 +7125,9 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     then-fs "^2.0.0"
 
 snyk@^1.161.1:
-  version "1.222.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.222.1.tgz#63539c50e047c42df0032760ef6672d52a9ef54f"
-  integrity sha512-vs8MSTpmaByofBMP5E/qeTfY9hPz5xkxOM0EaMkV/vgMP8F28Vcewdf6X9N4qfza7t2qGC3nwDTYvaXg6bOXxg==
+  version "1.223.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.223.0.tgz#5ae026f5656a4b955c48670e9ed4238886991776"
+  integrity sha512-39v592V9JwSP+hgE4LjwhCgj4X76XFHljM5+OUgoLF4q9taQeRksaypd+rcbT1oJPagAXD/X+73/f6msmgMxOw==
   dependencies:
     "@snyk/dep-graph" "1.12.0"
     "@snyk/gemfile" "1.2.0"
@@ -7162,7 +7162,7 @@ snyk@^1.161.1:
     snyk-python-plugin "^1.13.2"
     snyk-resolve "1.0.1"
     snyk-resolve-deps "4.4.0"
-    snyk-sbt-plugin "2.7.0"
+    snyk-sbt-plugin "2.8.0"
     snyk-tree "^1.0.0"
     snyk-try-require "1.3.1"
     source-map-support "^0.5.11"
@@ -8256,22 +8256,22 @@ xml2js@0.4.19:
     xmlbuilder "~9.0.1"
 
 xml2js@^0.4.17, xml2js@~0.4.0:
-  version "0.4.20"
-  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.20.tgz#f388b2ad23b092c41f81bbba080186b0acc0f6f1"
-  integrity sha512-5+6o7cEzGZerpxm1WspA2C5ylzcvmNpyGyt8Q5GJtaMzXOmKgxNhsatXGXozHFinzT1fQVZoQIq+zgJd1QsjZA==
+  version "0.4.21"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.21.tgz#987aa424991982411558a76b92a959681bd5fbee"
+  integrity sha512-gHRSAYBSA1JNVbLV2l8mTpQ/zTLcNtyG4YZmNlA3pjMWTgv9swW9muK55cr3fUmSOezLTR24iPQ+FqxilTvppw==
   dependencies:
     sax ">=0.6.0"
-    xmlbuilder "~10.0.0"
+    xmlbuilder "~13.0.0"
 
 xml@^1.0.0, xml@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
   integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
 
-xmlbuilder@~10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-10.0.0.tgz#c64e52f8ae097fe5fd46d1c38adaade071ee1b55"
-  integrity sha512-7RWHlmF1yU/E++BZkRQTEv8ZFAhZ+YHINUAxiZ5LQTKRQq//igpiY8rh7dJqPzgb/IzeC5jH9P7OaCERfM9DwA==
+xmlbuilder@~13.0.0:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-13.0.2.tgz#02ae33614b6a047d1c32b5389c1fdacb2bce47a7"
+  integrity sha512-Eux0i2QdDYKbdbA6AM6xE4m6ZTZr4G4xF9kahI2ukSEMCzwce2eX9WlTI5J3s+NU7hpasFsr8hWIONae7LluAQ==
 
 xmlbuilder@~9.0.1:
   version "9.0.7"

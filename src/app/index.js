@@ -24,9 +24,7 @@ if (environment === 'local.example') {
 
 const defaultFulfillIntents = require(`../content/${environment}-canfulfill-intents.json`);
 
-const voxaApp = new VoxaApp({
-  Model, views, variables, defaultFulfillIntents,
-});
+const voxaApp = new VoxaApp({ Model, views, variables });
 states(voxaApp);
 
 const googleConfig = {
@@ -37,7 +35,9 @@ const googleConfig = {
   },
 };
 
-exports.alexaSkill = new AlexaPlatform(voxaApp);
+const alexaConfig = { defaultFulfillIntents };
+
+exports.alexaSkill = new AlexaPlatform(voxaApp, alexaConfig);
 exports.assistantAction = new GoogleAssistantPlatform(voxaApp, googleConfig);
 
 // Replacing Dashbot keys with env variables for privacy since the repo is public

@@ -1,5 +1,9 @@
 [
+  "WelcomeIntent",
+  "NumberIntent",
+  "NumberOnlyIntent",
   "RemainingDaysIntent",
+  "RefundIntent",
   "ScoreIntent",
   "CompetitionPositionIntent",
   "EnterCompetitionIntent",
