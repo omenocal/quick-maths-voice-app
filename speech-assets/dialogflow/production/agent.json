@@ -50,7 +50,7 @@
   },
   "defaultTimezone": "America/New_York",
   "webhook": {
-    "url": "https://dreamy-bradbury.bespoken.link/googleAction",
+    "url": "https://your-custom.bespoken.link/googleAction",
     "headers": {},
     "available": true,
     "useForDomains": true,

@@ -15,16 +15,13 @@
         ],
         "endpoint": {
           "sslCertificateType": "Wildcard",
-          "uri": "https://dreamy-bradbury.bespoken.link/alexa"
+          "uri": "https://your-custom.bespoken.link/alexa"
         }
       }
     },
     "permissions": [
       {
         "name": "alexa::devices:all:address:full:read"
-      },
-      {
-        "name": "alexa::alerts:reminders:skill:readwrite"
       }
     ],
     "publishingInformation": {
@@ -82,11 +79,11 @@
       "usesPersonalInfo": true,
       "locales": {
         "en-US": {
-          "privacyPolicyUrl": "https://reverb.ai/privacy/",
+          "privacyPolicyUrl": "https://www.example.com/privacy/",
           "termsOfUseUrl": ""
         },
         "en-GB": {
-          "privacyPolicyUrl": "https://reverb.ai/privacy/",
+          "privacyPolicyUrl": "https://www.example.com/privacy/",
           "termsOfUseUrl": ""
         }
       }
