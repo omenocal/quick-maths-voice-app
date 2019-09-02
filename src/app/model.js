@@ -99,7 +99,7 @@ class Model {
       return voxaEvent.alexa.isp.getProductByReferenceName(config.alexa.subscriptionId);
     }
 
-    const { packageName } = config.google;
+    const packageName = config.google.androidPackageName;
 
     const { packageEntitlements } = voxaEvent.rawEvent.originalDetectIntentRequest.payload.user;
     console.log('packageEntitlements', JSON.stringify(packageEntitlements, null, 2));
