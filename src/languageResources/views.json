@@ -442,6 +442,11 @@
           ]
         }
       },
+      "Help": {
+        "say": [
+          "Happy to help. I will tell you a math operation and you need to guess the right result. It's as simple as 1 + 1, you say 2, and you get points. So, here's the deal: if you guess the result in the first 3 seconds, you get 10 points. Between 4 and 6 seconds, you get 8 points. Between 7 and 9 seconds, you get 6 points. If you guess the result after 9 seconds, you get 2 points. Additionally, if your operation includes numbers from 10 to 100, your points are doubled, if it's up to 1000, they're multiplied by 3, and up to 10000, multiplied by 4. But, if you say a wrong answer, you will lose 1 point. If you have zero points and keep failing, your score remains in zero, so don't worry about that. <break time=\"0.5s\"/>Ok. Let's continue."
+        ]
+      },
       "Fallback": {
         "NotUnderstood": {
           "say": [

@@ -5,6 +5,8 @@ const _ = require('lodash');
 function register(voxaApp) {
   voxaApp.onIntent('LaunchIntent', { to: 'launch' });
   voxaApp.onIntent('StartOverIntent', { to: 'launch' });
+  voxaApp.onIntent('HelpIntent', { to: 'help' });
+  voxaApp.onIntent('RepeatIntent', { to: 'repeat' });
   voxaApp.onIntent('CancelIntent', { to: 'exit' });
   voxaApp.onIntent('StopIntent', { to: 'exit' });
 
@@ -63,6 +65,47 @@ function register(voxaApp) {
       reply: 'Operation.WrongAnswer',
       to: 'begin',
     };
+  });
+
+  voxaApp.onState('repeat', (voxaEvent) => {
+    if (voxaEvent.session.new || !voxaEvent.model.reply || voxaEvent.model.reply.to === 'die') {
+      return { to: 'launch' };
+    }
+
+    const intentName = voxaEvent.intent.name;
+    const lastAlexaAPLTemplate = _.get(voxaEvent, 'model.reply.alexaAPLTemplate');
+    const lastReply = _.get(voxaEvent, 'model.reply.say');
+    const lastReprompt = _.get(voxaEvent, 'model.reply.reprompt');
+    const sayReply = _.isArray(lastReply) ? _.last(lastReply) : lastReply || [];
+    const to = _.get(voxaEvent, 'model.reply.to');
+
+    const finalResponse = {
+      flow: 'yield',
+      to,
+    };
+
+    if (!_.isEmpty(lastAlexaAPLTemplate)) {
+      finalResponse.alexaAPLTemplate = lastAlexaAPLTemplate;
+    }
+
+    if (!_.isEmpty(lastReprompt)) {
+      finalResponse.reprompt = lastReprompt;
+
+      if (intentName !== 'RepeatIntent') {
+        finalResponse.say = lastReprompt;
+      }
+    }
+
+    if (intentName === 'RepeatIntent' && !_.isEmpty(sayReply)) {
+      finalResponse.say = sayReply;
+    }
+
+    return finalResponse;
+  });
+
+  voxaApp.onState('help', {
+    reply: 'Help',
+    to: 'repeat',
   });
 
   voxaApp.onState('exit', (voxaEvent) => {
