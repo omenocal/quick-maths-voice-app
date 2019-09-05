@@ -53,6 +53,12 @@ voxaGA(voxaApp, config.googleAnalytics);
  * Load User into the model
  */
 voxaApp.onRequestStarted(async (voxaEvent) => {
+  const meta = {
+    meta: voxaEvent.rawEvent,
+  };
+
+  voxaEvent.log.info('VOXA REQUEST', meta);
+
   const user = await User.get(voxaEvent);
 
   voxaEvent.model.user = user;
@@ -97,6 +103,14 @@ voxaApp.onBeforeReplySent(async (voxaEvent, reply, transition) => {
     say: transition.say,
     to: transition.to,
   });
+
+  const meta = {
+    meta: reply,
+  };
+
+  voxaEvent.log.info('onBeforeReplySent', meta);
+
+  return reply;
 });
 
 voxaApp.onUnhandledState((voxaEvent) => {
@@ -126,7 +140,16 @@ voxaApp.onUnhandledState((voxaEvent) => {
 });
 
 voxaApp.onError((voxaEvent, error, reply) => {
-  console.log('error', error);
+  const metaReply = {
+    meta: voxaReply,
+  };
+
+  const metaModel = {
+    meta: voxaEvent.model,
+  };
+
+  voxaEvent.log.info('VOXA REPLY', metaReply);
+  voxaEvent.log.info('SESSION ATTRIBUTES', metaModel);
 
   const statement = _.head(voxaEvent.t('Error.tell', { returnObjects: true }));
 
