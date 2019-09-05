@@ -26,7 +26,7 @@ exports.position = (voxaEvent) => voxaEvent.model.position;
 exports.totalPlayers = (voxaEvent) => voxaEvent.model.totalPlayers;
 
 exports.totalPoints = (voxaEvent) => {
-  const count = voxaEvent.model.totalPoints;
+  const count = voxaEvent.model.getCurrentPoints();
 
   return voxaEvent.t('Competition.Score.points', { count });
 };

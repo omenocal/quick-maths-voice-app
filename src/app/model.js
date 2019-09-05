@@ -169,13 +169,11 @@ class Model {
     const allUsers = await this.user.getAllUsersInChallenge();
     const [
       position,
-      totalPoints,
       totalPlayers,
     ] = await this.user.getUserPosition(competitionId, allUsers);
 
     this.position = position;
     this.totalPlayers = totalPlayers;
-    this.totalPoints = totalPoints;
 
     return this.showWinnersDashboard(voxaEvent, allUsers, competitionId);
   }

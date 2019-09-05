@@ -50,6 +50,12 @@ function register(voxaApp) {
   });
 
   voxaApp.onState('result', (voxaEvent) => {
+    const intentName = voxaEvent.intent.name;
+
+    if (intentName === 'RepeatIntent') {
+      return { to: 'repeat' };
+    }
+
     const result = _.toInteger(
       (voxaEvent.intent.params.number || '').toLowerCase(),
     );
