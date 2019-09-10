@@ -38,10 +38,11 @@ function register(voxaApp) {
     if (_.includes(['WelcomeIntent', 'YesIntent'], intentName)) {
       voxaEvent.model.selectOperation(voxaEvent);
 
-      return {
-        reply: 'Operation.Expression',
-        to: 'result',
-      };
+      const response = voxaEvent.model.getOperationTemplate(voxaEvent);
+      response.reply = 'Operation.Expression';
+      response.to = 'result';
+
+      return response;
     }
 
     if (intentName === 'NoIntent') {
@@ -60,17 +61,15 @@ function register(voxaApp) {
       (voxaEvent.intent.params.number || '').toLowerCase(),
     );
 
+    const response = voxaEvent.model.getResultTemplate(voxaEvent);
+    response.reply = 'Operation.WrongAnswer';
+    response.to = 'begin';
+
     if (voxaEvent.model.isAnswerRight(result)) {
-      return {
-        reply: ['Operation.RightAnswerExpression', 'Operation.RightAnswer'],
-        to: 'begin',
-      };
+      response.reply = ['Operation.RightAnswerExpression', 'Operation.RightAnswer'];
     }
 
-    return {
-      reply: 'Operation.WrongAnswer',
-      to: 'begin',
-    };
+    return response;
   });
 
   voxaApp.onState('repeat', (voxaEvent) => {

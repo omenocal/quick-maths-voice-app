@@ -8,6 +8,8 @@ const voxa = require('voxa');
 
 const backgroundWithLeaderboardData = require('./aplTemplates/backgroundWithLeaderboard/data');
 const backgroundWithLeaderboardDocument = require('./aplTemplates/backgroundWithLeaderboard/document');
+const backgroundWithTextData = require('./aplTemplates/backgroundWithText/data');
+const backgroundWithTextDocument = require('./aplTemplates/backgroundWithText/document');
 const config = require('../config');
 const levels = require('../content/levels');
 const operators = require('../content/operators');
@@ -270,6 +272,47 @@ class Model {
 
   shouldSpeakReminder(reminderCount) {
     return this.user.data.reminderCount === reminderCount + 1;
+  }
+
+  getOperationTemplate(voxaEvent) {
+    const text = `${this.number1}<br>${this.operator}<br>${this.number2}`;
+
+    return this.getTextTemplate(voxaEvent, text);
+  }
+
+  getResultTemplate(voxaEvent) {
+    return this.getTextTemplate(voxaEvent, this.answer);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  getTextTemplate(voxaEvent, text) {
+    const hasAPLInterface = _.includes(voxaEvent.supportedInterfaces, 'Alexa.Presentation.APL');
+    const hasScreenInterface = _.includes(voxaEvent.supportedInterfaces, 'Display');
+    const reply = {};
+
+    if (hasAPLInterface) {
+      const datasources = _.cloneDeep(backgroundWithTextData);
+      const documentTemplate = _.cloneDeep(backgroundWithTextDocument);
+
+      datasources.data.text = text;
+
+      reply.alexaAPLTemplate = {
+        token: 'APL',
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        document: documentTemplate,
+        datasources,
+      };
+    } else if (hasScreenInterface) {
+      const bodyTemplate1 = new DisplayTemplate('BodyTemplate1')
+        .setTitle(voxaEvent.t('Competition.ResultsTitle'))
+        .setTextContent(text)
+        .setToken('bodyTemplate1')
+        .setBackButton('HIDDEN');
+
+      reply.alexaRenderTemplate = bodyTemplate1;
+    }
+
+    return reply;
   }
 
   // eslint-disable-next-line class-methods-use-this
