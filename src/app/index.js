@@ -139,7 +139,7 @@ voxaApp.onUnhandledState((voxaEvent) => {
   return response;
 });
 
-voxaApp.onError((voxaEvent, error, reply) => {
+voxaApp.onError((voxaEvent, error, voxaReply) => {
   const metaReply = {
     meta: voxaReply,
   };
@@ -153,11 +153,11 @@ voxaApp.onError((voxaEvent, error, reply) => {
 
   const statement = _.head(voxaEvent.t('Error.tell', { returnObjects: true }));
 
-  reply.clear();
-  reply.addStatement(statement);
-  reply.terminate();
+  voxaReply.clear();
+  voxaReply.addStatement(statement);
+  voxaReply.terminate();
 
-  return reply;
+  return voxaReply;
 }, true);
 
 exports.voxaApp = voxaApp;

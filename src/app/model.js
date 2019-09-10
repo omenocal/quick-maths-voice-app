@@ -189,8 +189,8 @@ class Model {
   selectOperation(voxaEvent) {
     if (this.user.isFirstTime) {
       this.level = _.head(levels);
-    } else if (this.user.sessionCount <= 3) {
-      this.level = _.nth(levels, this.user.sessionCount);
+    } else if (this.user.data.sessionCount <= 3) {
+      this.level = _.nth(levels, this.user.data.sessionCount);
     } else {
       this.level = _.sample(levels);
     }
