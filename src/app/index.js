@@ -94,15 +94,30 @@ voxaApp.onBeforeReplySent(async (voxaEvent, reply, transition) => {
 
   await user.save({ userId: voxaEvent.user.userId });
 
+  const {
+    dialogflowLinkOutSuggestion,
+    dialogflowSuggestions,
+    directives,
+  } = transition;
+
   voxaEvent.model.reply = _.pickBy({
-    dialogflowLinkOutSuggestion: transition.dialogflowLinkOutSuggestion,
-    dialogflowSuggestions: transition.dialogflowSuggestions,
-    directives: transition.directives,
     flow: transition.flow,
     reprompt: transition.reprompt,
     say: transition.say,
     to: transition.to,
   });
+
+  if (dialogflowLinkOutSuggestion) {
+    voxaEvent.model.reply.dialogflowLinkOutSuggestion = dialogflowLinkOutSuggestion;
+  }
+
+  if (dialogflowSuggestions) {
+    voxaEvent.model.reply.dialogflowSuggestions = dialogflowSuggestions;
+  }
+
+  if (directives) {
+    voxaEvent.model.reply.directives = directives;
+  }
 
   const meta = {
     meta: reply,
@@ -127,14 +142,29 @@ voxaApp.onUnhandledState((voxaEvent) => {
   reply = _.filter(_.concat('Fallback.NotUnderstood.say', reply));
 
   const response = {
-    dialogflowLinkOutSuggestion,
-    dialogflowSuggestions,
-    directives,
     flow: 'yield',
     reprompt: lastReprompt,
     say: reply,
     to: voxaEvent.model.reply.to,
   };
+
+  if (dialogflowLinkOutSuggestion) {
+    response.dialogflowLinkOutSuggestion = dialogflowLinkOutSuggestion;
+  }
+
+  if (dialogflowSuggestions) {
+    response.dialogflowSuggestions = dialogflowSuggestions;
+  }
+
+  if (directives) {
+    response.directives = directives;
+  }
+
+  const meta = {
+    meta: response,
+  };
+
+  voxaEvent.log.info('onUnhandledState', meta);
 
   return response;
 });
