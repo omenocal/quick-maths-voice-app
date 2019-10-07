@@ -106,8 +106,13 @@ class User {
       .map('score')
       .value();
 
-    const position = _.indexOf(playersArray, currentCompetition.score) + 1;
-    return [position, currentCompetition.score, _.size(playersArray)];
+    let currentPosition = _.size(playersArray);
+
+    if (currentCompetition) {
+      currentPosition = _.indexOf(playersArray, currentCompetition.score) + 1;
+    }
+
+    return [currentPosition, _.size(playersArray)];
   }
 
   hasPoints(competitionId) {
